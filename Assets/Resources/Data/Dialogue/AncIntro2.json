@@ -1,0 +1,278 @@
+{
+	"position": "character",
+	"default": "pre1",
+	"options": {
+	  "panelHeight": "half"
+	},
+	"background": "SteveBedroom",
+	"frames": {
+		"pre1": {
+			"type": "text",
+			"background": "SteveGaming2",
+			"options": {
+				"hideNameText": true
+			},
+			"text": "Hey, Steve. Steve? Pause that thing, man.",
+			"next": "intro1"
+		},
+		"intro1": {
+			"type": "text",
+			"nameText": "Steve",
+			"text": "Sorry, Mitch. What's up?",
+			"next": "intro2",
+			"vnStage": {
+				"steve": {
+					"image": "steve",
+					"x": -400,
+					"y": 0					
+				},
+				"mitch": {
+					"image": "mitch_tense_reversed",
+					"x": 400,
+					"y": 0,
+					"fade": true
+				}
+			}
+		},
+		"intro2": {
+			"type": "text",
+			"nameText": "Steve",
+			"text": "I thought you were out clubbing with Tom and Rex. Or was that next Sunday?",
+			"next": "intro3"
+		},
+		"intro3": {
+			"type": "text",
+			"nameText": "Mitch",
+			"text": "Nah, man, I don't party with those guys. I've got my own group of friends, but they're busy. Just me, Molson, and the Lions tonight.",
+			"next": "intro4",
+			"vnStage": {
+				"steve": {
+					"image": "steve_neutral",
+					"fade": true
+				},
+				"mitch": {
+					"image": "mitch_whisper_reversed",
+					"fade": false
+				}
+			}
+		},
+		"intro4": {
+			"type": "text",
+			"nameText": "Mitch",
+			"text": "Look, I don't want to freak you out, man, but just... listen.",
+			"next": "intro5"
+		},
+		"intro5": {
+			"type": "text",
+			"nameText": "",
+			"options": {
+				"hideNameText": true
+			},
+			"text": "<(>scratching noises<)>",
+			"next": "intro6",
+			"vnOptions": {
+				"typeOn": false,
+				"postPresentScript": "AncScripts.IntroScratchingNoises"
+			},
+			"vnStage": {
+				"steve": {
+					"image": "steve_neutral",
+					"fade": false
+				},
+				"mitch": {
+					"image": "mitch_tense_reversed",
+					"fade": false
+				}
+			}
+		},
+		"intro6": {
+			"type": "choice",
+			"text": "",
+			"options": {
+			  "panelHeight": "full",
+			  "hideNameText": true
+			},
+			"choices": [
+			  {
+				"text": "What is that?",
+				"next": "this.introwa1"
+			  },
+			  {
+				"text": "That's not funny.",
+				"next": "this.introwb1"
+			  }
+			]
+		},
+		"introwa1": {
+			"type": "text",
+			"nameText": "Steve",
+			"text": "What the fuck is that?",
+			"next": "introwa2",
+			"vnStage": {
+				"steve": {
+					"image": "steve",
+					"fade": false
+				},
+				"mitch": {
+					"image": "mitch_tense_reversed",
+					"fade": true
+				}
+			}
+		},
+		"introwa2": {
+			"type": "text",
+			"nameText": "Mitch",
+			"text": "I don't know, man. I saw some shadows, and it ain't human. Some horror movie shit.",
+			"next": "intro7",
+			"vnStage": {
+				"steve": {
+					"image": "steve_neutral",
+					"fade": true
+				},
+				"mitch": {
+					"image": "mitch_whisper_reversed",
+					"fade": false
+				}
+			}
+		},
+		"introwb1": {
+			"type": "text",
+			"nameText": "Steve",
+			"text": "Come on, man, that's not funny.",
+			"next": "introwb2",
+			"vnStage": {
+				"steve": {
+					"image": "steve",
+					"fade": false
+				},
+				"mitch": {
+					"image": "mitch_tense_reversed",
+					"fade": true
+				}
+			}
+		},
+		"introwb2": {
+			"type": "text",
+			"nameText": "Mitch",
+			"text": "It's not a prank,",
+			"next": "intro7",
+			"vnStage": {
+				"steve": {
+					"image": "steve_neutral",
+					"fade": true
+				},
+				"mitch": {
+					"image": "mitch_whisper_reversed",
+					"fade": false
+				}
+			}
+		},
+		"intro7": {
+			"type": "text",
+			"nameText": "",
+			"options": {
+				"hideNameText": true
+			},
+			"text": "<(>terrifying noises<)>",
+			"next": "end1",
+			"vnOptions": {
+				"typeOn": false,
+				"postPresentScript": "AncScripts.IntroEntryNoises"
+			},
+			"vnStage": {
+				"steve": {
+					"image": "steve_terrified",
+					"fade": false
+				},
+				"mitch": {
+					"image": "mitch_terrified_reversed",
+					"fade": false
+				}
+			}
+		},
+		"end1": {
+			"type": "text",
+			"nameText": "Mitch",
+			"text": "Steve?",
+			"next": "end2",
+			"vnStage": {
+				"steve": {
+					"image": "steve_neutral",
+					"fade": true
+				},
+				"mitch": {
+					"image": "mitch_whisper_reversed",
+					"fade": false
+				}
+			}
+		},
+		"end2": {
+			"type": "text",
+			"nameText": "Steve",
+			"text": "Yeah?",
+			"next": "end3",
+			"vnStage": {
+				"steve": {
+					"image": "steve",
+					"fade": false
+				},
+				"mitch": {
+					"image": "mitch_tense_reversed",
+					"fade": true
+				}
+			}
+		},
+		"end3": {
+			"type": "text",
+			"nameText": "Mitch",
+			"text": "Run!",
+			"next": "meta.return",
+			"vnStage": {
+				"steve": {
+					"image": "steve_neutral",
+					"fade": true
+				},
+				"mitch": {
+					"image": "mitch_whisper_reversed",
+					"fade": false
+				}
+			}
+		},
+		"vn1": {
+			"type": "text",
+			"nameText": "Steve",
+			"text": "VN stuff!",
+			"next": "vn2",
+			"options": {
+			  "panelHeight": "half"
+			},
+			"vnStage": {
+				"steve": {
+					"image": "teststeve",
+					"x": -500,
+					"y": 0
+				}
+			}
+		},
+		"vn2": {
+			"type": "text",
+			"nameText": "Not Steve",
+			"text": "Another guy!",
+			"next": "started1",
+			"options": {
+			  "panelHeight": "half"
+			},
+			"vnStage": {
+				"steve": {
+					"fade": true
+				},
+				"notsteve": {
+					"image": "teststeve",
+					"x": 500,
+					"y": 0,
+					"flip": true
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,60 @@
+{
+	"position": "character",
+	"default": "m1",
+	"options": {
+	  "panelHeight": "half"
+	},
+	"background": "",
+	"frames": {
+		"m1": {
+			"type": "text",
+			"next": "m1a",
+			"text": "...",
+			"options": {
+				"hideNameText": true
+			}
+		},
+		"m1a": {
+			"type": "text",
+			"next": "m2",
+			"text": "Man, that was a rough day...",
+			"nameText": "Steve"
+		},
+		"m2": {
+			"type": "text",
+			"next": "m3",
+			"text": "What the fuck?",
+			"nameText": "Steve"
+		},
+		"m3": {
+			"type": "text",
+			"next": "m4",
+			"text": "I don't even recognize myself in the mirror anymore.",
+			"nameText": "Steve"
+		},
+		"m4": {
+			"type": "text",
+			"next": "m5",
+			"text": "Did I ever? Did I ever recognize that image in the glass as me? Did I ever even look?",
+			"nameText": "Steve"
+		},
+		"m5": {
+			"type": "text",
+			"next": "m6",
+			"text": "I mean, that's me in the mirror. Of course it's me. I'm standing right here. It's gotta be just a weird stress response.",
+			"nameText": "Steve"
+		},
+		"m6": {
+			"type": "text",
+			"next": "end1",
+			"text": "But I just... I don't want to be the guy in the mirror. I didn't ever want to be. And I don't even know if I really am anymore.",
+			"nameText": "Steve"
+		},
+		"end1": {
+			"type": "text",
+			"next": "meta.return",
+			"text": "What the fuck am I saying? What the FUCK is happening to me?!",
+			"nameText": "Steve"
+		}
+	}
+}

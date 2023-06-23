@@ -1,0 +1,32 @@
+{
+	"position": "character",
+	"default": "m1",
+	"options": {
+	  "panelHeight": "half"
+	},
+	"background": "",
+	"frames": {
+		"m1": {
+			"type": "text",
+			"next": "m2",
+			"text": "...",
+			"options": {
+				"hideNameText": true
+			},
+			"vnStage": {
+				"steve": {
+					"image": "steve_sad",
+					"x": -180,
+					"y": 0,
+					"z": 1
+				},
+				"mitch": {
+					"visible": false,
+					"image": "mitch_reversed",
+					"x": 400,
+					"y": 0
+				}
+			}
+		}
+	}
+}

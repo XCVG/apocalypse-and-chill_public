@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: Assets/CommonCore/Scenes/InitScene.unity
+    guid: 449623cc6e175934da1578c81c140a1f
+  - enabled: 1
+    path: Assets/Scenes/Meta/InitScene.unity
+    guid: 341bc82ebb728924b9551ff39d040c4b
+  - enabled: 1
+    path: Assets/CommonCore/Scenes/FakeExitScene.unity
+    guid: 5537f3ad403a7b64dbc6dd9161494af3
+  - enabled: 0
+    path: Assets/CommonCore/Scenes/MainMenuScene.unity
+    guid: a51e17d614e2013468c629622820718b
+  - enabled: 1
+    path: Assets/Scenes/Meta/MainMenuScene.unity
+    guid: 5d658ed47d750b949abd6e9964b1aaf9
+  - enabled: 0
+    path: Assets/CommonCore/Scenes/LoadingScene.unity
+    guid: cd635b8898638b34f8836aa8c83454c0
+  - enabled: 1
+    path: Assets/Scenes/Meta/LoadingScene.unity
+    guid: 719c12ac8fdc8c4428023ea30f1c802b
+  - enabled: 0
+    path: Assets/CommonCore/Scenes/GameOverScene.unity
+    guid: a7eab270066551a44a169bbd9eff71fd
+  - enabled: 1
+    path: Assets/Scenes/Meta/GameOverScene.unity
+    guid: 77d904c2841ec7b4fa16a5850e286f3c
+  - enabled: 1
+    path: Assets/CommonCore/Scenes/ExampleScene.unity
+    guid: 88e8ec212f116c54b8544ea5c7ced22c
+  - enabled: 1
+    path: Assets/Scenes/Other/TestScene.unity
+    guid: 0b340932fb43bfa4b86dd20ee1c3e91e
+  - enabled: 0
+    path: Assets/Scenes/Other/ForestTestScene.unity
+    guid: b8cce87a8128efa4687e2e470e923788
+  - enabled: 0
+    path: Assets/Scenes/Other/UITestScene.unity
+    guid: cfdb22e5218ad914fb7ce8c13c41ed19
+  - enabled: 0
+    path: Assets/Scenes/Other/LosTestScene.unity
+    guid: a855dee420cdad64ab3a213aca1958d4
+  - enabled: 0
+    path: Assets/Scenes/Other/NavigationNodeTestScene.unity
+    guid: 94a82386c665a3a47ab3532f6f46205c
+  - enabled: 0
+    path: Assets/Scenes/Other/VideoTestScene.unity
+    guid: 413fab56a472c0f43b9d97b7921b3088
+  - enabled: 1
+    path: Assets/Scenes/Anc/AncDialogueTest.unity
+    guid: 97b3d676b26937243b1a2aba63fc7fa6
+  - enabled: 1
+    path: Assets/Scenes/Anc/AncMainScene.unity
+    guid: 57081aae3979ba640940809665aa50ff
+  m_configObjects: {}

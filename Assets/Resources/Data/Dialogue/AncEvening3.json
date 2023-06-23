@@ -1,0 +1,265 @@
+{
+	"position": "character",
+	"default": "a1",
+	"options": {
+	  "panelHeight": "half"
+	},
+	"background": "Park",
+	"frames": {
+		"a1": {
+			"type": "text",
+			"next": "a2",
+			"text": "...",
+			"options": {
+				"hideNameText": true
+			},
+			"vnStage": {
+				"steve": {
+					"image": "steph",
+					"x": -100,
+					"y": 0,
+					"z": 5
+				},
+				"tiff": {
+					"visible": false,
+					"image": "tiff",
+					"x": 500,
+					"y": 0,
+					"z": 1
+				},
+				"nguyen": {
+					"visible": false,
+					"image": "nguyen",
+					"x": 200,
+					"y": 0
+				}
+			}
+		},
+		"a2": {
+			"type": "text",
+			"next": "a3",
+			"text": "Wow. I did it. I fucking did it!",
+			"nameText": "Stephanie",
+			"vnStage": {
+				"steve": {
+					"image": "steph_talk"
+				}
+			}
+		},
+		"a3": {
+			"type": "text",
+			"next": "a4",
+			"text": "Fuck, this feels good. I'd take this <i>without</i> the magical powers.",
+			"nameText": "Stephanie",
+			"vnStage": {
+				"steve": {
+					"image": "steph_talk"
+				}
+			}
+		},
+		"a4": {
+			"type": "text",
+			"next": "a4a",
+			"text": "God damn, am I really saying that? Do I really...",
+			"nameText": "Stephanie",
+			"vnStage": {
+				"steve": {
+					"image": "steph_talk"
+				}
+			}
+		},
+		"a4a": {
+			"type": "text",
+			"next": "meet1",
+			"text": "Hey!",
+			"nameText": "Tiff's Voice?",
+			"vnStage": {
+				"steve": {
+					"image": "steph_panicked"
+				}
+			}
+		},
+		"meet1": {
+			"type": "text",
+			"next": "meet2",
+			"text": "...",
+			"options": {
+				"hideNameText": true
+			},
+			"vnStage": {
+				"steve": {
+					"image": "steph_panicked",
+					"x": -500
+				},
+				"tiff": {
+					"visible": true
+
+				},
+				"nguyen": {
+					"visible": true
+				}
+			}
+		},
+		"meet2": {
+			"type": "text",
+			"next": "meet3",
+			"text": "Gah! Where the fuck did you come from?",
+			"nameText": "Stephanie",
+			"vnStage": {
+				"steve": {
+					"image": "steph_concerned"
+				},
+				"tiff": {
+					"fade": true
+
+				},
+				"nguyen": {
+					"fade": true
+				}
+			}
+		},
+		"meet3": {
+			"type": "text",
+			"next": "meet4",
+			"text": "We're patrolling this park again, because of Shade activity. Remember what we talked about last night? Activity's been high around here lately.",
+			"nameText": "Tiff",
+			"vnStage": {
+				"steve": {
+					"image": "steph",
+					"fade": true
+				},
+				"tiff": {
+					"image": "tiff_talk",
+					"fade": false
+
+				},
+				"nguyen": {
+					"fade": true
+				}
+			}
+		},
+		"meet4": {
+			"type": "text",
+			"next": "meet5",
+			"text": "We saw the burst of light when you transformed, went to investigate, and, well, here we are.",
+			"nameText": "Tiff",
+			"vnStage": {
+				
+			}
+		},
+		"meet5": {
+			"type": "text",
+			"next": "shades1",
+			"text": "We kinda figured it would be you, though. Some magical girls are terrified, but most of us are really excited to use our powers when we first discover them.",
+			"nameText": "Wynn",
+			"vnStage": {
+				"tiff": {
+					"image": "tiff",
+					"fade": true
+
+				},
+				"nguyen": {
+					"image": "nguyen_talk",
+					"fade": false
+				}
+			}
+		},
+		"shades1": {
+			"type": "text",
+			"next": "shades2",
+			"text": "<(>screaming noises<)>",
+			"background": "ParkShades",
+			"options": {
+				"hideNameText": true				
+			},
+			"vnOptions": {
+				"typeOn": false,
+				"postPresentScript": "AncScripts.FightOminousNoise"
+			},
+			"vnStage": {
+				"steve": {
+					"image": "steph_panicked",
+					"fade": false
+				},
+				"tiff": {
+					"fade": false
+
+				},
+				"nguyen": {
+					"image": "nguyen",
+					"fade": false
+				}
+			}
+		},
+		"shades2": {
+			"type": "text",
+			"next": "shades3",
+			"background": "ParkShades",
+			"text": "And here they come...",
+			"nameText": "Wynn",
+			"vnStage": {
+				"steve": {
+					"fade": true
+				},
+				"tiff": {
+					"image": "tiff",
+					"fade": true
+
+				},
+				"nguyen": {
+					"image": "nguyen_talk",
+					"fade": false
+				}
+			}
+		},
+		"shades3": {
+			"type": "text",
+			"next": "meta.return",
+			"text": "Hey. You've got this. Just follow our lead.",
+			"nameText": "Tiff",
+			"background": "ParkShades",
+			"vnStage": {
+				"steve": {
+					"fade": true
+				},
+				"tiff": {
+					"image": "tiff_talk",
+					"fade": false
+
+				},
+				"nguyen": {
+					"image": "nguyen",
+					"fade": true
+				}
+			}
+		},
+		"shades4": {
+			"type": "text",
+			"next": "meta.return",
+			"text": "...",
+			"background": "ParkShades",
+			"options": {
+				"hideNameText": true				
+			},
+			"vnOptions": {
+				"typeOn": false,
+				"postPresentScript": "AncScripts.FightOminousNoise"
+			},
+			"vnStage": {
+				"steve": {
+					"image": "steph",
+					"fade": false
+				},
+				"tiff": {
+					"image": "tiff",
+					"fade": false
+
+				},
+				"nguyen": {
+					"image": "nguyen",
+					"fade": false
+				}
+			}
+		}
+	}
+}

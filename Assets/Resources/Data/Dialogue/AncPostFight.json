@@ -1,0 +1,291 @@
+{
+	"position": "character",
+	"default": "a1",
+	"options": {
+	  "panelHeight": "half"
+	},
+	"background": "MitchRoom2Hole",
+	"frames": {
+		"a1": {
+			"type": "text",
+			"next": "a2",
+			"text": "...",
+			"options": {
+				"hideNameText": true
+			},
+			"vnStage": {
+				"steve": {
+					"image": "steph",
+					"x": -300,
+					"y": 0,
+					"z": 5
+				},
+				"mitch": {
+					"image": "mitch_pale",
+					"x": -500,
+					"y": 0,
+					"z": 2
+				},
+				"tiff": {
+					"image": "tiff",
+					"x": 530,
+					"y": 0,
+					"z": 1
+				},
+				"nguyen": {
+					"image": "nguyen",
+					"x": 300,
+					"y": 0
+				}
+			}
+		},
+		"a2": {
+			"type": "text",
+			"next": "a3",
+			"text": "Who the fuck are you and how the fuck did you just do that?",
+			"nameText": "Mitch",
+			"vnStage": {
+				"steve": {
+					"fade": true
+				},
+				"mitch": {
+					"image": "mitch_pale_talk",
+					"fade": false
+				},
+				"tiff": {
+					"fade": true
+				},
+				"nguyen": {
+					"fade": true
+				}
+			}
+		},
+		"a3": {
+			"type": "text",
+			"next": "a4",
+			"text": "We're magical girls, we fight monsters like the ones you just saw, and that's all you need to know.",
+			"nameText": "???",
+			"vnStage": {
+				"mitch": {
+					"image": "mitch_pale",
+					"fade": true
+				},
+				"nguyen": {
+					"image": "nguyen_talk",
+					"fade": false
+				}
+			}
+		},
+		"a4": {
+			"type": "text",
+			"next": "a5",
+			"text": "You've got to keep this a secret. You can't tell anyone what happened. And your friend needs to come with us.",
+			"nameText": "???",
+			"vnStage": {
+				"tiff": {
+					"image": "tiff_talk",
+					"fade": false
+				},
+				"nguyen": {
+					"image": "nguyen",
+					"fade": true
+				}
+			}
+		},
+		"a5": {
+			"type": "text",
+			"next": "a6",
+			"text": "Go fuck yourself. I'm calling the police.",
+			"nameText": "Mitch",
+			"vnStage": {
+				"steve": {
+					"fade": true
+				},
+				"mitch": {
+					"image": "mitch_pale_talk",
+					"fade": false
+				},
+				"tiff": {
+					"fade": true
+				},
+				"nguyen": {
+					"fade": true
+				}
+			}
+		},
+		"a6": {
+			"type": "text",
+			"next": "a7",
+			"text": "To do what, turn yourself in for discharging a restricted firearm outside of a designated range?",
+			"nameText": "???",
+			"vnStage": {
+				"mitch": {
+					"image": "mitch_pale",
+					"fade": true
+				},
+				"nguyen": {
+					"image": "nguyen_talk",
+					"fade": false
+				}
+			}
+		},
+		"a7": {
+			"type": "text",
+			"next": "a8",
+			"text": "You're right. Maybe I shouldn't call the cops.",
+			"nameText": "Mitch",
+			"vnStage": {
+				"mitch": {
+					"image": "mitch_pale_talk",
+					"fade": false
+				},
+				"nguyen": {
+					"image": "nguyen",
+					"fade": true
+				}
+			}
+		},
+		"a8": {
+			"type": "text",
+			"next": "a9",
+			"text": "If you're thinking of turning that firearms charge into a murder charge, that's not going to go the way you think.",
+			"nameText": "???",
+			"vnStage": {
+				"mitch": {
+					"image": "mitch_pale",
+					"fade": true
+				},
+				"nguyen": {
+					"image": "nguyen_talk",
+					"fade": false
+				}
+			}
+		},
+		"a9": {
+			"type": "text",
+			"next": "decision1",
+			"text": "Look, we didn't come here to fight you. We came here to stop the Shades, which we did. We just need to talk to your friend, because she's like us.",
+			"nameText": "???",
+			"vnStage": {
+				"tiff": {
+					"image": "tiff_talk",
+					"fade": false
+				},
+				"nguyen": {
+					"image": "nguyen",
+					"fade": true
+				}
+			}
+		},
+		"decision1": {
+			"type": "choice",
+			"text": "",
+			"options": {
+			  "panelHeight": "full",
+			  "hideNameText": true
+			},
+			"choices": [
+			  {
+				"text": "It's okay, I'll go with them.",
+				"next": "this.da1"
+			  },
+			  {
+				"text": "I have no choice, I'll go with them",
+				"next": "this.db1"
+			  }
+			],
+			"vnStage": {
+				"steve": {
+					"fade": false
+				},
+				"mitch": {
+					"fade": false
+				},
+				"tiff": {
+					"image": "tiff",
+					"fade": false
+				},
+				"nguyen": {
+					"fade": false
+				}
+			}
+		},
+		"da1": {
+			"type": "text",
+			"next": "end1",
+			"text": "It's okay, Mitch. I don't want this to be a fight. I'll go with them.",
+			"nameText": "Steph",
+			"vnStage": {
+				"steve": {
+					"image": "steph_talk",
+					"fade": false
+				},
+				"mitch": {
+					"fade": true
+				},
+				"tiff": {					
+					"fade": true
+				},
+				"nguyen": {
+					"fade": true
+				}
+			}
+		},
+		"db1": {
+			"type": "text",
+			"next": "end1",
+			"text": "I don't think they're asking, Mitch. They'll probably vaporize both of us if I don't go with them.",
+			"nameText": "Steph",
+			"vnStage": {
+				"steve": {
+					"image": "steph_talk",
+					"fade": false
+				},
+				"mitch": {
+					"fade": true
+				},
+				"tiff": {					
+					"fade": true
+				},
+				"nguyen": {
+					"fade": true
+				}
+			}
+		},
+		"end1": {
+			"type": "text",
+			"next": "end2",
+			"text": "Fine. But if h... my friend doesn't come back, I'm coming after you. Laws or magic be damned.",
+			"nameText": "Mitch",
+			"vnStage": {
+				"mitch": {
+					"image": "mitch_pale_talk",
+					"fade": false
+				},
+				"steve": {
+					"image": "steph",
+					"fade": true
+				}
+			}
+		},
+		"end2": {
+			"type": "text",
+			"next": "meta.return",
+			"text": "She'll be back soon, I promise. We just need to have a short conversation, that's all.",
+			"nameText": "???",
+			"vnStage": {
+				"steve": {
+					"x": 150
+				},
+				"mitch": {
+					"image": "mitch_pale",
+					"fade": true
+				},
+				"tiff": {
+					"image": "tiff_talk",
+					"fade": false
+				}
+			}
+		}
+	}
+}

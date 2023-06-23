@@ -1,0 +1,676 @@
+{
+	"position": "character",
+	"default": "a1",
+	"options": {
+	  "panelHeight": "half"
+	},
+	"background": "Park",
+	"frames": {
+		"a1": {
+			"type": "text",
+			"next": "a2",
+			"text": "...",
+			"options": {
+				"hideNameText": true
+			},
+			"vnOptions": {
+				"typeOn": false
+			},
+			"vnStage": {
+				"steve": {
+					"image": "steph",
+					"x": -300,
+					"y": 0,
+					"z": 5
+				},
+				"tiff": {
+					"image": "tiff",
+					"x": 400,
+					"y": 0,
+					"z": 1
+				},
+				"nguyen": {
+					"image": "nguyen",
+					"x": 100,
+					"y": 0,
+					"z": 3
+				}
+			}
+		},
+		"a2": {
+			"type": "text",
+			"next": "a3",
+			"text": "Great job, everyone! We sure showed those Shades, huh?",
+			"nameText": "Tiff",
+			"vnStage": {
+				"steve": {
+					"fade": true
+				},
+				"tiff": {
+					"image": "tiff_talk",
+					"fade": false
+
+				},
+				"nguyen": {
+					"fade": true
+				}
+			}
+		},
+		"a3": {
+			"type": "text",
+			"next": "a4",
+			"text": "Yeah, good job! Especially you, Stephanie. Having a third magical girl made this a lot easier. I can hardly believe this was your first fight.",
+			"nameText": "Wynn",
+			"vnStage": {
+				"tiff": {
+					"image": "tiff",
+					"fade": true
+				},
+				"nguyen": {
+					"image": "nguyen_talk",
+					"fade": false
+				}
+			}
+		},
+		"a4": {
+			"type": "choice",
+			"text": "",
+			"options": {
+			  "panelHeight": "full",
+			  "hideNameText": true
+			},
+			"choices": [
+			  {
+				"text": "Thanks, that means a lot to me",
+				"next": "this.thankful1"
+			  },
+			  {
+				"text": "I guess I did okay",
+				"next": "this.humble1"
+			  }
+			],
+			"vnStage": {
+				"steve": {
+					"fade": false
+				},
+				"tiff": {
+					"fade": false
+				},
+				"nguyen": {
+					"image": "nguyen",
+					"fade": false
+				}
+			}
+		},
+		"thankful1": {
+			"type": "text",
+			"next": "thankful2",
+			"text": "Thanks, guys. That means a lot to me. I was really nervous about this whole thing!",
+			"nameText": "Stephanie",
+			"vnStage": {
+				"steve": {
+					"image": "steph_talk",
+					"fade": false
+				},
+				"tiff": {
+					"image": "tiff",
+					"fade": true
+				},
+				"nguyen": {
+					"image": "nguyen",
+					"fade": true
+				}
+			}
+		},
+		"thankful2": {
+			"type": "text",
+			"next": "b1",
+			"text": "I get that. Some of us had a lot of trouble settling into our new roles, but you've just slipped right into it.",
+			"nameText": "Wynn",
+			"vnStage": {
+				"steve": {
+					"image": "steph",
+					"fade": true
+				},
+				"tiff": {
+					"image": "tiff",
+					"fade": true
+				},
+				"nguyen": {
+					"image": "nguyen_talk",
+					"fade": false
+				}
+			}
+		},
+		"humble1": {
+			"type": "text",
+			"next": "humble2",
+			"text": "I guess I did okay. I was pretty nervous going in, but it worked out.",
+			"nameText": "Stephanie",
+			"vnStage": {
+				"steve": {
+					"image": "steph_talk",
+					"fade": false
+				},
+				"tiff": {
+					"image": "tiff",
+					"fade": true
+				},
+				"nguyen": {
+					"image": "nguyen",
+					"fade": true
+				}
+			}
+		},
+		"humble2": {
+			"type": "text",
+			"next": "b1",
+			"text": "Don't sell yourself short. Some of us had a lot of trouble settling into our new roles, but you've just slipped right into it.",
+			"nameText": "Wynn",
+			"vnStage": {
+				"steve": {
+					"image": "steph",
+					"fade": true
+				},
+				"tiff": {
+					"image": "tiff",
+					"fade": true
+				},
+				"nguyen": {
+					"image": "nguyen_talk",
+					"fade": false
+				}
+			}
+		},
+		"b1": {
+			"type": "text",
+			"next": "b2",
+			"text": "I... uh-oh.",
+			"nameText": "Stephanie",
+			"vnStage": {
+				"steve": {
+					"image": "steph_concerned",
+					"fade": false
+				},
+				"tiff": {
+					"image": "tiff",
+					"fade": true
+				},
+				"nguyen": {
+					"image": "nguyen",
+					"fade": true
+				}
+			}
+		},
+		"b2": {
+			"type": "text",
+			"next": "b3",
+			"text": "What is it?",
+			"nameText": "Tiff",
+			"vnStage": {
+				"steve": {
+					"image": "steph_concerned",
+					"fade": true
+				},
+				"tiff": {
+					"image": "tiff_talk",
+					"fade": false
+				}
+			}
+		},
+		"b3": {
+			"type": "text",
+			"next": "b4",
+			"text": "I feel the magic fading. I think I'm about to change back!",
+			"nameText": "Stephanie",
+			"vnStage": {
+				"steve": {
+					"image": "steph_concerned",
+					"fade": false
+				},
+				"tiff": {
+					"image": "tiff",
+					"fade": true
+				}
+			}
+		},
+		"b4": {
+			"type": "text",
+			"next": "ax1",
+			"text": "Hey, it was a tough fight, your magic reserves are probably almost gone. Don't worry, just let it happen.",
+			"nameText": "Tiff",
+			"vnStage": {
+				"steve": {
+					"image": "steph_concerned",
+					"fade": true
+				},
+				"tiff": {
+					"image": "tiff_talk",
+					"fade": false
+				}
+			}
+		},
+		"ax1": {
+			"type": "text",
+			"next": "pret1",
+			"text": "No, you don't understand, I'm not...",
+			"nameText": "Stephanie",
+			"vnStage": {
+				"steve": {
+					"image": "steph_talk",
+					"fade": false
+				},
+				"tiff": {
+					"image": "tiff",
+					"fade": true
+
+				},
+				"nguyen": {
+					"image": "nguyen",
+					"fade": true
+				}
+			}
+		},
+		"pret1": {
+			"type": "text",
+			"next": "transform",
+			"text": "Oh, shit, it's happening! No, no, no!",
+			"vnOptions": {
+				"postPresentScript": "AncScripts.EveningDetransformStart"
+			},
+			"nameText": "Stephanie",
+			"vnStage": {
+				"steve": {
+					"image": "stransform_1",
+					"fade": false
+				},
+				"tiff": {
+					"image": "tiff",
+					"fade": true
+
+				},
+				"nguyen": {
+					"image": "nguyen",
+					"fade": true
+				}
+			}
+		},
+		"transform": {
+			"type": "text",
+			"next": "pt1",
+			"text": "",
+			"options": {
+				"hideNameText": true				
+			},
+			"vnOptions": {
+				"typeOn": false,
+				"postPresentScript": "AncScripts.EveningDetransform"
+			},
+			"vnStage": {
+			}
+		},
+		"pt1": {
+			"type": "text",
+			"next": "pt2",
+			"text": "Fuck! God damn it!",
+			"nameText": "Stephanie",
+			"vnStage": {
+				"steve": {
+					"image": "steve_terrified",
+					"fade": false,
+					"x": -400
+				},
+				"tiff": {
+					"image": "tiff",
+					"fade": true
+
+				},
+				"nguyen": {
+					"image": "nguyen",
+					"fade": true
+				}
+			}
+		},
+		"pt2": {
+			"type": "text",
+			"next": "pt3",
+			"text": "You weren't supposed to see me like this!",
+			"nameText": "Stephanie",
+			"vnStage": {
+				"steve": {
+					"image": "steve_terrified"
+				}
+			}
+		},
+		"pt3": {
+			"type": "text",
+			"next": "pt4",
+			"text": "I'm not a real magical girl. Just some kind of cosmic fucking mistake.",
+			"nameText": "Stephanie",
+			"vnStage": {
+				"steve": {
+					"image": "steve"
+				}
+			}
+		},
+		"pt4": {
+			"type": "text",
+			"next": "pt5",
+			"text": "Really? You sure about that?",
+			"nameText": "Wynn",
+			"vnStage": {
+				"steve": {
+					"image": "steve_sad",
+					"fade": true
+				},
+				"tiff": {
+					"image": "tiff",
+					"fade": true
+				},
+				"nguyen": {
+					"image": "nguyen_talk",
+					"fade": false
+				}
+			}
+		},
+		"pt5": {
+			"type": "text",
+			"next": "pt7",
+			"text": "There are some who say that when we transform, we're just taking on our true forms. So if that wasn't who you were supposed to be, why did you take that form?",
+			"nameText": "Tiff",
+			"vnStage": {
+				"steve": {
+					"image": "steve_sad",
+					"fade": true
+				},
+				"tiff": {
+					"image": "tiff_talk",
+					"fade": false
+				},
+				"nguyen": {
+					"image": "nguyen",
+					"fade": true
+				}
+			}
+		},
+		"pt7": {
+			"type": "text",
+			"next": "pt8",
+			"text": "I...",
+			"nameText": "Stephanie",
+			"vnStage": {
+				"steve": {
+					"image": "steve",
+					"fade": false
+				},
+				"tiff": {
+					"image": "tiff",
+					"fade": true
+
+				},
+				"nguyen": {
+					"image": "nguyen",
+					"fade": true
+				}
+			}
+		},
+		"pt8": {
+			"type": "text",
+			"next": "pt9",
+			"text": "What if you're right? What if I am? Then what the fuck is this? <i>Why</i> the fuck is this?",
+			"nameText": "Stephanie",
+			"vnStage": {
+			}
+		},
+		"pt9": {
+			"type": "text",
+			"next": "pt10",
+			"text": "Pre-everything.",
+			"nameText": "Tiff",
+			"vnStage": {
+				"steve": {
+					"image": "steve_sad",
+					"fade": true
+				},
+				"tiff": {
+					"image": "tiff_talk",
+					"fade": false
+				},
+				"nguyen": {
+					"image": "nguyen",
+					"fade": true
+				}
+			}
+		},
+		"pt10": {
+			"type": "text",
+			"next": "pt12",
+			"text": "There isn't a magic button that'll bring your normal form in line with your magical one. At least, not one that I know about. You're better off with science for this one.",
+			"nameText": "Tiff",
+			"vnStage": {
+			}
+		},
+		"pt12": {
+			"type": "text",
+			"next": "pt12a",
+			"text": "Yeah, I looked into it a little, and some of those results are pretty damn magical.",
+			"nameText": "Wynn",
+			"vnStage": {
+				"tiff": {
+					"image": "tiff",
+					"fade": true
+
+				},
+				"nguyen": {
+					"image": "nguyen_talk",
+					"fade": false
+				}
+			}
+		},
+		"pt12a": {
+			"type": "text",
+			"next": "pt14",
+			"text": "I'm not saying it's going to be easy, because it probably won't be. And I can't say either of us really understand what you're going through. But we're more than just some girls who occasionally fight together. We're sisters-in-arms, and we're with you all the way.",
+			"nameText": "Wynn",
+			"vnStage": {
+			}
+		},
+		"pt14": {
+			"type": "text",
+			"next": "pt15",
+			"text": "I... thanks. I'm still fucking lost, but what you said makes me feel a little better.",
+			"nameText": "Stephanie",
+			"vnStage": {
+				"steve": {
+					"image": "steve",
+					"fade": false
+				},
+				"tiff": {
+					"image": "tiff",
+					"fade": true
+
+				},
+				"nguyen": {
+					"image": "nguyen",
+					"fade": true
+				}
+			}
+		},
+		"pt15": {
+			"type": "text",
+			"next": "pt16",
+			"text": "So, do I, like, point a magical girl shaped searchlight into the sky when I want to get your attention?",
+			"nameText": "Stephanie",
+			"vnStage": {
+			}
+		},
+		"pt16": {
+			"type": "text",
+			"next": "pt17",
+			"text": "Hah, nothing like that. We have a Discord server. I'll give you the details.",
+			"nameText": "Tiff",
+			"vnStage": {
+				"steve": {
+					"image": "steve_neutral",
+					"fade": true
+				},
+				"tiff": {
+					"image": "tiff_talk",
+					"fade": false
+				},
+				"nguyen": {
+					"image": "nguyen",
+					"fade": true
+				}
+			}
+		},
+		"pt17": {
+			"type": "text",
+			"next": "end1",
+			"text": "We should probably start heading home. Are you going to be alright, Stephanie?",
+			"nameText": "Wynn",
+			"vnStage": {
+				"tiff": {
+					"image": "tiff",
+					"fade": true
+				},
+				"nguyen": {
+					"image": "nguyen_talk",
+					"fade": false
+				}
+			}
+		},
+		"end1": {
+			"type": "choice",
+			"text": "",
+			"options": {
+			  "panelHeight": "full",
+			  "hideNameText": true
+			},
+			"choices": [
+			  {
+				"text": "Not really, but I'll survive",
+				"next": "this.enda1"
+			  },
+			  {
+				"text": "I think I'll be okay now",
+				"next": "this.endb1"
+			  }
+			],
+			"vnStage": {
+				"steve": {
+					"image": "steve_neutral",
+					"fade": false
+				},
+				"tiff": {
+					"image": "tiff",
+					"fade": false
+				},
+				"nguyen": {
+					"image": "nguyen",
+					"fade": false
+				}
+			}
+		},
+		"enda1": {
+			"type": "text",
+			"next": "end2",
+			"text": "Not really, but I'm not going to go home and blow my brains out, if that's what you're asking.",
+			"nameText": "Stephanie",
+			"vnStage": {
+				"steve": {
+					"image": "steve",
+					"fade": false
+				},
+				"tiff": {
+					"image": "tiff",
+					"fade": true
+				},
+				"nguyen": {
+					"image": "nguyen",
+					"fade": true
+				}
+			}
+		},
+		"endb1": {
+			"type": "text",
+			"next": "end2",
+			"text": "Yeah, I think I'll be okay. I have a lot to think about, but I'll figure it out.",
+			"nameText": "Stephanie",
+			"vnStage": {
+				"steve": {
+					"image": "steve",
+					"fade": false
+				},
+				"tiff": {
+					"image": "tiff",
+					"fade": true
+				},
+				"nguyen": {
+					"image": "nguyen",
+					"fade": true
+				}
+			}
+		},
+		"end2": {
+			"type": "text",
+			"next": "end3",
+			"text": "We'll meet up again soon, I promise. In the meantime, get on the Discord. Really! The whole crew's eager to meet you.",
+			"nameText": "Tiff",
+			"vnStage": {
+				"steve": {
+					"image": "steve_neutral",
+					"fade": true
+				},
+				"tiff": {
+					"image": "tiff_talk",
+					"fade": false
+				},
+				"nguyen": {
+					"image": "nguyen",
+					"fade": true
+				}
+			}
+		},
+		"end3": {
+			"type": "text",
+			"next": "meta.return",
+			"text": "I will. And thank you. For everything.",
+			"nameText": "Stephanie",
+			"vnStage": {
+				"steve": {
+					"image": "steve",
+					"fade": false
+				},
+				"tiff": {
+					"image": "tiff",
+					"fade": true
+				},
+				"nguyen": {
+					"image": "nguyen",
+					"fade": true
+				}
+			}
+		},
+		"end4": {
+			"type": "text",
+			"next": "meta.return",
+			"text": "Don't thank us yet, we're just getting started! Really, though, don't be a stranger.",
+			"nameText": "Wynn",
+			"vnStage": {
+				"steve": {
+					"image": "steve",
+					"fade": false
+				},
+				"tiff": {
+					"image": "tiff",
+					"fade": true
+				},
+				"nguyen": {
+					"image": "nguyen_talk",
+					"fade": false
+				}
+			}
+		}
+	}
+}

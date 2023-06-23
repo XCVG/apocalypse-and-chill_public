@@ -1,0 +1,40 @@
+# What is this?
+
+This is the source code (and other assets) for See Who I Am (https://xcvg.itch.io/see-who-i-am), my entry to Magical Girl Game Jam 6 from 2022!
+
+# What do I do with this?
+
+That's up to you!
+
+# Missing pieces
+
+Because of licensing or other logistics issues, there are a few files not included in this release:
+
+**DevConsole (Assets/Plugins/DevConsole)**
+
+This is a third-party asset that is not included, except for a config file with settings for this game. You can grab it from the Asset Store (https://assetstore.unity.com/packages/tools/gui/devconsole-2-16833). Note that this version does not work with the latest version of Unity. I have received permission from the author, Antonio Cobo, to update this asset to work with newer versions of Unity. There should be a link to the updated packages in the CommonCore Modules repository (https://github.com/XCVG/commoncore-modules).
+
+**Music (Assets/Resources/DynamicMusic)**
+
+The music used in the game is not included. All the music used is listed in CREDITS, though without track names. Those can be found in a separate file included with this release.
+
+**Credits Video (Assets/StreamingAssets/Video)**
+
+The end/credits video is not included. You should be able to pull this from a built version of the game. I'm not sure if the game will fail gracefully or break without it.
+
+**XCVG Systems logos (Assets/Shared/Graphics/xcvgsys2018_pot_dark.png, Assets/Shared/Graphics/xcvgsys2018_pot_light.png)**
+
+The XCVG Systems logos are not included, because these are mine and you can't use them :P
+
+# License and applicability
+
+See Who I Am itself is licensed under the MIT License, the full text of which is located in COPYING.txt. This includes all art and game data in Assets/Resources except for the sounds in Assets/Resources/DynamicSound, all scene data and code in Assets/Scenes, and all game data and code in Assets/Shared (excluding the fonts in Assets/Shared/Fonts). For the sake of completeness, the metadata and settings in Packages and ProjectSettings may also be considered to fall under the MIT License.
+
+The original graphics have been released formally under CC-BY/OGA-BY as a separate package (https://opengameart.org/content/see-who-i-am-art-pack).
+
+CommonCore core code, found under CommonCore, CommonCoreGame, and CommonCoreModules, is dual-licensed under the MIT license and CC-BY. For all practical intents and purposes it can be considered to fall under the same licensing as the rest of the game. Note that there are a few resources and code files in these folders that are third-party and fall under other licenses. See the Documentation folder, which comes from upstream, for details.
+
+Third-party textures, sounds, and libraries fall under their respective licenses. You can find info about this in CREDITS.txt or in the Documentation folder depending on if the asset in question is exclusive to this project or comes from upstream.
+
+The XCVG Systems logo is a trademark and should not be used in derivative works, though I think all instances of it have been removed from this package. I also ask that you don't misrepresent any derivatives as the original, and credit myself and this project. I think this is implied by both the MIT and CC-BY licenses, so this is more a clarification than a separate request.
+

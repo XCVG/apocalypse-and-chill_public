@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: ca7f6df326ee72a43bf1e523ea3ab7bd
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - GosmickSans
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 1878d176ae4acac41b2e6de56832c04c, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

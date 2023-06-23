@@ -1,0 +1,649 @@
+{
+	"position": "character",
+	"default": "m1",
+	"options": {
+	  "panelHeight": "half"
+	},
+	"background": "BathroomWide",
+	"frames": {
+		"m1": {
+			"type": "text",
+			"next": "m2",
+			"text": "...",
+			"options": {
+				"hideNameText": true
+			},
+			"vnStage": {
+				"steve": {
+					"image": "steve_sad",
+					"x": -400,
+					"y": 0,
+					"z": 1
+				},
+				"mitch": {
+					"image": "mitch_reversed",
+					"x": 460,
+					"y": 0
+				}
+			}
+		},
+		"m2": {
+			"type": "text",
+			"next": "m3",
+			"text": "Dude.",
+			"nameText": "Mitch",
+			"vnStage": {
+				"steve": {
+					"fade": true
+				},
+				"mitch": {
+					"image": "mitch_talk_reversed",
+					"fade": false
+				}
+			}
+		},
+		"m3": {
+			"type": "text",
+			"next": "m4",
+			"text": "You fucking <i>destroyed</i> that mirror. What's got you down now?",
+			"nameText": "Mitch",
+			"vnStage": {
+				"steve": {
+					"fade": true
+				},
+				"mitch": {
+					"image": "mitch_talk_reversed",
+					"fade": false
+				}
+			}
+		},
+		"m4": {
+			"type": "choice",
+			"text": "",
+			"options": {
+			  "panelHeight": "full",
+			  "hideNameText": true
+			},
+			"choices": [
+			  {
+				"text": "I don't recognize that person in the mirror",
+				"next": "this.honest1"
+			  },
+			  {
+				"text": "I'm just pissed off about everything",
+				"next": "this.dismiss1"
+			  }
+			],
+			"vnStage": {
+				"steve": {
+					"image": "steve_sad",
+					"fade": false
+				},
+				"mitch": {
+					"image": "mitch_reversed",
+					"fade": false
+				}
+			}
+		},
+		"dismiss1": {
+			"type": "text",
+			"next": "dismiss2",
+			"text": "I'm just pissed off about everything. College and monsters and magical girls and the city and this and that and all this fucking bullshit.",
+			"nameText": "Steve",
+			"vnStage": {
+				"steve": {
+					"image": "steve",
+					"fade": false
+				},
+				"mitch": {
+					"fade": true
+				}
+			}
+		},
+		"dismiss2": {
+			"type": "text",
+			"next": "dismiss3",
+			"text": "No, you aren't. You're stressed, but you're not angry. When you're really angry, you get quiet. I've known you since high school, you're not going to get shit past me so easily.",
+			"nameText": "Mitch",
+			"vnStage": {
+				"steve": {
+					"image": "steve_sad",
+					"fade": true
+				},
+				"mitch": {
+					"image": "mitch_talk_reversed",
+					"fade": false
+				}
+			}
+		},
+		"dismiss3": {
+			"type": "text",
+			"next": "honest1",
+			"text": "So, what's <i>really</i> eating at you? Still the monsters and shit?",
+			"nameText": "Mitch",
+			"vnStage": {
+				
+			}
+		},
+		"honest1": {
+			"type": "text",
+			"next": "honest2",
+			"text": "I don't recognize that person staring back at me from the mirror. And I don't know if I ever did.",
+			"nameText": "Steve",
+			"vnStage": {
+				"steve": {
+					"image": "steve",
+					"fade": false
+				},
+				"mitch": {
+					"image": "mitch_reversed",
+					"fade": true
+				}
+			}
+		},
+		"honest2": {
+			"type": "text",
+			"next": "honest3",
+			"text": "Do you ever feel like you're not all there? Like, I <i>know</i> this is me, but it just doesn't really feel me. Like there's some kinda separation there.",
+			"nameText": "Steve",
+			"vnStage": {
+				
+			}
+		},
+		"honest3": {
+			"type": "text",
+			"next": "honest4",
+			"text": "You're starting to freak me out, man.",
+			"nameText": "Mitch",
+			"vnStage": {
+				"steve": {
+					"image": "steve_sad",
+					"fade": true
+				},
+				"mitch": {
+					"image": "mitch_talk_reversed",
+					"fade": false
+				}
+			}
+		},
+		"honest4": {
+			"type": "text",
+			"next": "honest5",
+			"text": "I've always felt like that, Mitch. As long as I can remember. But I didn't feel that way when I was a magical girl. I felt alive. I felt <i>there</i>.",
+			"nameText": "Steve",
+			"vnStage": {
+				"steve": {
+					"image": "steve",
+					"fade": false
+				},
+				"mitch": {
+					"image": "mitch_reversed",
+					"fade": true
+				}
+			}
+		},
+		"honest5": {
+			"type": "text",
+			"next": "honest6",
+			"text": "Tiff said when I transformed I was just unleashing something that's always been within me. What if it's not just the magic? What if it's something else, too? Something deeper and more personal?",
+			"nameText": "Steve",
+			"vnStage": {
+				"steve": {
+					"image": "steve",
+					"fade": false
+				},
+				"mitch": {
+					"image": "mitch_reversed",
+					"fade": true
+				}
+			}
+		},
+		"honest6": {
+			"type": "text",
+			"next": "honest7",
+			"text": "Are you saying...",
+			"nameText": "Mitch",
+			"vnStage": {
+				"steve": {
+					"image": "steve_sad",
+					"fade": true
+				},
+				"mitch": {
+					"image": "mitch_talk_reversed",
+					"fade": false
+				}
+			}
+		},
+		"honest7": {
+			"type": "text",
+			"next": "honest8",
+			"text": "Yeah. I'm dancing around it because I'm fucking terrified of saying it out loud, but yes, I'm saying exactly what you're thinking.",
+			"nameText": "Steve",
+			"vnStage": {
+				"steve": {
+					"image": "steve",
+					"fade": false
+				},
+				"mitch": {
+					"image": "mitch_reversed",
+					"fade": true
+				}
+			}
+		},
+		"honest8": {
+			"type": "text",
+			"next": "honest9",
+			"text": "Man...",
+			"nameText": "Mitch",
+			"vnStage": {
+				"steve": {
+					"image": "steve_sad",
+					"fade": true
+				},
+				"mitch": {
+					"image": "mitch_talk_reversed",
+					"fade": false
+				}
+			}
+		},
+		"honest9": {
+			"type": "text",
+			"next": "b1",
+			"text": "Where the fuck did this come from? You were always just a normal dude. I mean, nerdy, sure, but normal. You never even had a gay phase!",
+			"nameText": "Mitch",
+			"vnStage": {
+				
+			}
+		},
+		"b1": {
+			"type": "text",
+			"next": "b1a",
+			"text": "I've played literally every game where I've had the option as a girl. And I don't think I'm into guys, so no gay phase. Or I guess that means I've always been gay. I don't know. I read a lot of yuri fanfiction.",
+			"nameText": "Steve",
+			"vnStage": {
+				"steve": {
+					"image": "steve",
+					"fade": false
+				},
+				"mitch": {
+					"image": "mitch_reversed",
+					"fade": true
+				}
+			}
+		},
+		"b1a": {
+			"type": "text",
+			"next": "b2",
+			"text": "I think the signs were always there. I just didn't know what the fuck they meant.",
+			"nameText": "Steve",
+			"vnStage": {
+				"steve": {
+					"image": "steve",
+					"fade": false
+				},
+				"mitch": {
+					"image": "mitch_reversed",
+					"fade": true
+				}
+			}
+		},
+		"b2": {
+			"type": "text",
+			"next": "inter1",
+			"text": "Are you sure those monsters didn't do something to your head? Or those magical girls, for that matter?",
+			"nameText": "Mitch",
+			"vnStage": {
+				"steve": {
+					"image": "steve_sad",
+					"fade": true
+				},
+				"mitch": {
+					"image": "mitch_talk_reversed",
+					"fade": false
+				}
+			}
+		},
+		"inter1": {
+			"type": "choice",
+			"text": "",
+			"options": {
+			  "panelHeight": "full",
+			  "hideNameText": true
+			},
+			"choices": [
+			  {
+				"text": "I'm sure it wasn't them",
+				"next": "this.intera1"
+			  },
+			  {
+				"text": "I don't think so, but I don't know",
+				"next": "this.interb1",
+				"microscript": [
+					{
+					  "flag": "AncBathroom_LessSure",
+					  "set": true
+					}
+				]
+			  }
+			],
+			"vnStage": {
+				"steve": {
+					"image": "steve_sad",
+					"fade": false
+				},
+				"mitch": {
+					"image": "mitch_reversed",
+					"fade": false
+				}
+			}
+		},
+		"interb1": {
+			"type": "text",
+			"next": "interb2",
+			"text": "I don't know. I don't think so, but maybe something really did zap my brain, and everything seems like it's always been this way because all my memories got changed.",
+			"nameText": "Steve",
+			"vnStage": {
+				"steve": {
+					"image": "steve",
+					"fade": false
+				},
+				"mitch": {
+					"image": "mitch_reversed",
+					"fade": true
+				}
+			}
+		},
+		"interb2": {
+			"type": "text",
+			"next": "b4",
+			"text": "I think if I'd changed that much, you'd have noticed, though. And even if that did happen, does it change what's going on now?",
+			"nameText": "Steve",
+			"vnStage": {
+				"steve": {
+					"image": "steve",
+					"fade": false
+				},
+				"mitch": {
+					"image": "mitch_reversed",
+					"fade": true
+				}
+			}
+		},
+		"intera1": {
+			"type": "text",
+			"next": "intera2",
+			"text": "No, I'm sure it wasn't either of those. It'd be easy to blame it on magic or whatever, but the longer I think about it, the less sense that makes.",
+			"nameText": "Steve",
+			"vnStage": {
+				"steve": {
+					"image": "steve",
+					"fade": false
+				},
+				"mitch": {
+					"image": "mitch_reversed",
+					"fade": true
+				}
+			}
+		},
+		"intera2": {
+			"type": "text",
+			"next": "b4",
+			"text": "Unless they've fucked with my head so much I'm misremembering a decade of my life, but I think you would have called me on that if they did.",
+			"nameText": "Steve",
+			"vnStage": {
+				"steve": {
+					"image": "steve",
+					"fade": false
+				},
+				"mitch": {
+					"image": "mitch_reversed",
+					"fade": true
+				}
+			}
+		},
+		"b3": {
+			"type": "text",
+			"next": "b4",
+			"text": "Unless they can change years of core memories, no.",
+			"nameText": "Steve",
+			"vnStage": {
+				"steve": {
+					"image": "steve",
+					"fade": false
+				},
+				"mitch": {
+					"image": "mitch_reversed",
+					"fade": true
+				}
+			}
+		},
+		"b4": {
+			"type": "text",
+			"next": "b5",
+			"text": "I don't get it, man. I just don't understand why anyone would want to be a girl.",
+			"nameText": "Mitch",
+			"vnStage": {
+				"steve": {
+					"image": "steve_sad",
+					"fade": true
+				},
+				"mitch": {
+					"image": "mitch_talk_reversed",
+					"fade": false
+				}
+			}
+		},
+		"b5": {
+			"type": "text",
+			"next": "b6",
+			"text": "And I have never understood why anyone wanted to be a guy.",
+			"nameText": "Steve",
+			"vnStage": {
+				"steve": {
+					"image": "steve",
+					"fade": false
+				},
+				"mitch": {
+					"image": "mitch_reversed",
+					"fade": true
+				}
+			}
+		},
+		"b6": {
+			"type": "text",
+			"next": "b7",
+			"text": "I just thought, you know, some of us just get the short end of the stick. It is what it is. But you really like being a guy, don't you?",
+			"nameText": "Steve",
+			"vnStage": {
+				
+			}
+		},
+		"b7": {
+			"type": "text",
+			"next": "c2",
+			"text": "Yeah, man. Why wouldn't I? That's like, a super fucking weird question to ask.",
+			"nameText": "Mitch",
+			"vnStage": {
+				"steve": {
+					"image": "steve_sad",
+					"fade": true
+				},
+				"mitch": {
+					"image": "mitch_talk_reversed",
+					"fade": false
+				}
+			}
+		},
+		"c2": {
+			"type": "text",
+			"next": "c3",
+			"text": "This is crazy shit, Steve. Is it even Steve? I made friends with Steve back in Chilliwack, who am I talking to now?",
+			"nameText": "Mitch",
+			"vnStage": {
+				"steve": {
+					"image": "steve_sad",
+					"fade": true
+				},
+				"mitch": {
+					"image": "mitch_talk_reversed",
+					"fade": false
+				}
+			}
+		},
+		"c3": {
+			"type": "choice",
+			"text": "",
+			"options": {
+			  "panelHeight": "full",
+			  "hideNameText": true
+			},
+			"choices": [
+			  {
+				"text": "I'm still the same person, give or take",
+				"next": "this.person1"
+			  },
+			  {
+				"text": "I don't know, but we're still friends",
+				"next": "this.friends1",
+				"microscript": [
+					{
+					  "flag": "AncBathroom_StillFriends",
+					  "set": true
+					}
+				]
+			  }
+			],
+			"vnStage": {
+				"steve": {
+					"image": "steve_sad",
+					"fade": false
+				},
+				"mitch": {
+					"image": "mitch_reversed",
+					"fade": false
+				}
+			}
+		},
+		"person1": {
+			"type": "text",
+			"next": "person2",
+			"text": "I'm still me. This isn't, but I am, if that makes any sense. I still love Warzone and spend too much time looking at cars I can't afford. There's just... more to it.",
+			"nameText": "Steve",
+			"vnStage": {
+				"steve": {
+					"image": "steve",
+					"fade": false
+				},
+				"mitch": {
+					"image": "mitch_reversed",
+					"fade": true
+				}
+			}
+		},
+		"person2": {
+			"type": "text",
+			"next": "end1",
+			"text": "Hey. We're still friends. This doesn't change that.",
+			"nameText": "Steve",
+			"vnStage": {
+				
+			}
+		},
+		"friends1": {
+			"type": "text",
+			"next": "end1",
+			"text": "I don't know anymore. I'm still me, I guess, but this isn't. I still like the same things, but there's a part of me I haven't explored. But we're still friends. This doesn't change that.",
+			"nameText": "Steve",
+			"vnStage": {
+				"steve": {
+					"image": "steve",
+					"fade": false
+				},
+				"mitch": {
+					"image": "mitch_reversed",
+					"fade": true
+				}
+			}
+		},
+		"end1": {
+			"type": "text",
+			"next": "end2",
+			"text": "I don't know, man. Man. Is it even okay to say that? This is just a fucking lot to take in.",
+			"nameText": "Mitch",
+			"vnStage": {
+				"steve": {
+					"image": "steve_sad",
+					"fade": true
+				},
+				"mitch": {
+					"image": "mitch_talk_reversed",
+					"fade": false
+				}
+			}
+		},
+		"end2": {
+			"type": "text",
+			"next": "end3",
+			"text": "Yeah, well, it's even more to take in for me. I don't know where the fuck I'm going to go from here.",
+			"nameText": "Steve",
+			"vnStage": {
+				"steve": {
+					"image": "steve",
+					"fade": false
+				},
+				"mitch": {
+					"image": "mitch_reversed",
+					"fade": true
+				}
+			}
+		},
+		"end3": {
+			"type": "text",
+			"next": "end4",
+			"text": "Look, I've got to go for a walk, clear my head. I'll do something about the mirror when I get back. Just tell the guys I fell or something.",
+			"nameText": "Steve",
+			"vnStage": {
+				"steve": {
+					"image": "steve",
+					"fade": false
+				},
+				"mitch": {
+					"image": "mitch_reversed",
+					"fade": true
+				}
+			}
+		},
+		"end4": {
+			"type": "text",
+			"next": "end5",
+			"text": "Yeah, that's smart. Don't worry about the mirror, I'll make up some bullshit.",
+			"nameText": "Mitch",
+			"vnStage": {
+				"steve": {
+					"image": "steve_sad",
+					"fade": true
+				},
+				"mitch": {
+					"image": "mitch_talk_reversed",
+					"fade": false
+				}
+			}
+		},
+		"end5": {
+			"type": "text",
+			"next": "meta.return",
+			"text": "Thanks, man. I'll be back soon.",
+			"nameText": "Steve",
+			"vnStage": {
+				"steve": {
+					"image": "steve",
+					"fade": false
+				},
+				"mitch": {
+					"image": "mitch_reversed",
+					"fade": true
+				}
+			}
+		}
+	}
+}

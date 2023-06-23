@@ -1,0 +1,404 @@
+{
+	"position": "character",
+	"default": "m1",
+	"options": {
+	  "panelHeight": "half"
+	},
+	"background": "Cafeteria",
+	"frames": {
+		"m1": {
+			"type": "text",
+			"next": "m2",
+			"text": "...",
+			"options": {
+				"hideNameText": true
+			},
+			"vnStage": {
+				"steve": {
+					"image": "steve_sad",
+					"x": -180,
+					"y": 0,
+					"z": 1
+				},
+				"mitch": {
+					"visible": false,
+					"image": "mitch_reversed",
+					"x": 400,
+					"y": 0
+				}
+			}
+		},
+		"m2": {
+			"type": "text",
+			"next": "m3",
+			"text": "...fuck",
+			"nameText": "Steve",
+			"vnStage": {
+				"steve": {
+					"image": "steve"
+				}
+			}
+		},
+		"m3": {
+			"type": "text",
+			"next": "m4",
+			"text": "Hey. How'd that movie thing go?",
+			"nameText": "Mitch",
+			"vnStage": {
+				"steve": {
+					"image": "steve_sad",
+					"fade": true
+				},
+				"mitch": {
+					"visible": true,
+					"image": "mitch_talk_reversed"
+				}
+			}
+		},
+		"m4": {
+			"type": "text",
+			"next": "m5",
+			"text": "I don't know, man. Okay, I guess? I wasn't really with it this morning. Even our instructor pointed that out.",
+			"nameText": "Steve",
+			"vnStage": {
+				"steve": {
+					"image": "steve",
+					"fade": false
+				},
+				"mitch": {
+					"image": "mitch_reversed",
+					"fade": true
+				}
+			}
+		},
+		"m5": {
+			"type": "text",
+			"next": "choice1",
+			"text": "Geez, you really are out of it. What's got you so down?",
+			"nameText": "Mitch",
+			"vnStage": {
+				"steve": {
+					"image": "steve_sad",
+					"fade": true
+				},
+				"mitch": {
+					"image": "mitch_talk_reversed",
+					"fade": false
+				}
+			}
+		},
+		"choice1": {
+			"type": "choice",
+			"text": "",
+			"options": {
+			  "panelHeight": "full",
+			  "hideNameText": true
+			},
+			"choices": [
+			  {
+				"text": "College is more stressful than I thought it would be",
+				"next": "this.col1",
+				"microscript": [
+					{
+					  "flag": "AncLunch_CollegeHard",
+					  "set": true
+					}
+				]
+			  },
+			  {
+				"text": "I can't stop thinking about the magical girl thing",
+				"next": "this.mg1",
+				"microscript": [
+					{
+					  "flag": "AncLunch_MagicalGirls",
+					  "set": true
+					}
+				]
+			  },
+			  {
+				"text": "Everything is not fine after that monster attack",
+				"next": "this.mon1",
+				"microscript": [
+					{
+					  "flag": "AncLunch_MonstersScary",
+					  "set": true
+					}
+				]
+			  }
+			],
+			"vnStage": {
+				"steve": {
+					"image": "steve_sad",
+					"fade": false
+				},
+				"mitch": {
+					"image": "mitch_reversed",
+					"fade": false
+				}
+			}
+		},
+		"mon1": {
+			"type": "text",
+			"next": "mon2",
+			"text": "It's just... look, I know you said we need to just pretend everything is fine, but everything is not fine. That monster attack was scary, man.",
+			"nameText": "Steve",
+			"vnStage": {
+				"steve": {
+					"image": "steve",
+					"fade": false
+				},
+				"mitch": {
+					"image": "mitch_reversed",
+					"fade": true
+				}
+			}
+		},
+		"mon2": {
+			"type": "text",
+			"next": "mon3",
+			"text": "Were they ghosts? Demons? Does this mean angels exist? Gods? Hell? If the supernatural is real, why is this the first that we've heard about it? Or is it?",
+			"nameText": "Steve"			
+		},
+		"mon3": {
+			"type": "text",
+			"next": "mon4",
+			"text": "And then there's the whole magical girl thing. An all-female league of magical warriors that protect the world. Except... I'm one of them, somehow. And even with all the world-ending shit I keep going back to that.",
+			"nameText": "Steve"			
+		},
+		"mon4": {
+			"type": "text",
+			"next": "mon5",
+			"text": "I didn't tell the other magical girls I'm not really a girl. I should have been pissed off about being called a girl, right? But I don't know, it didn't really bug me. And I just felt different as a magical girl. I felt better. Alive in a way that I just haven't felt before.",
+			"nameText": "Steve"			
+		},
+		"mon5": {
+			"type": "text",
+			"next": "col4",
+			"text": "It must have been because of the magic. Or was it? I don't know, man. I know I'm overthinking again.",
+			"nameText": "Steve"			
+		},
+		"mg1": {
+			"type": "text",
+			"next": "mg2",
+			"text": "I can't stop thinking about the whole magical girl thing. That I am one. Apparently. Somehow.",
+			"nameText": "Steve",
+			"vnStage": {
+				"steve": {
+					"image": "steve",
+					"fade": false
+				},
+				"mitch": {
+					"image": "mitch_reversed",
+					"fade": true
+				}
+			}
+		},
+		"mg2": {
+			"type": "text",
+			"next": "mg3",
+			"text": "I know I'm always pretty stressed because of college to begin with, I'm always ranting about how tough it is. And those monsters freak the fuck out of me. But it's the magical girl thing I can't stop thinking about.",
+			"nameText": "Steve"			
+		},
+		"mg3": {
+			"type": "text",
+			"next": "mg4",
+			"text": "I didn't tell the other magical girls I'm not really a girl. I know I should have corrected them, but I didn't. I guess I didn't want to screw up whatever dynamic we had, even though it was already screwed up.",
+			"nameText": "Steve"			
+		},
+		"mg4": {
+			"type": "text",
+			"next": "mg5",
+			"text": "I should be pissed off about even being called a girl, right? But I don't know, that didn't really bug me. And I just felt different as a magical girl. I felt better. Alive in a way that I just haven't felt before.",
+			"nameText": "Steve"			
+		},
+		"mg5": {
+			"type": "text",
+			"next": "mg6",
+			"text": "Because of the magic, right? I think it's more about being a wizard than being a girl, dude.",
+			"nameText": "Mitch",
+			"vnStage": {
+				"steve": {
+					"image": "steve_sad",
+					"fade": true
+				},
+				"mitch": {
+					"image": "mitch_talk_reversed",
+					"fade": false
+				}
+			}
+		},
+		"mg6": {
+			"type": "text",
+			"next": "col4",
+			"text": "I don't know. I know I'm overthinking again.",
+			"nameText": "Steve",
+			"vnStage": {
+				"steve": {
+					"image": "steve",
+					"fade": false
+				},
+				"mitch": {
+					"image": "mitch_reversed",
+					"fade": true
+				}
+			}
+		},
+		"col1": {
+			"type": "text",
+			"next": "col1a",
+			"text": "College is just... hard as fuck. The classes are all more intense than high school, I've moved away from home, I haven't been able to make friends, the city is nothing like Chilliwack, everything is just weird and different and a pain to deal with.",
+			"nameText": "Steve",
+			"vnStage": {
+				"steve": {
+					"image": "steve",
+					"fade": false
+				},
+				"mitch": {
+					"image": "mitch_reversed",
+					"fade": true
+				}
+			}
+		},
+		"col1a": {
+			"type": "text",
+			"next": "col2",
+			"text": "I don't know. I didn't mean to rant. I think the stress is really starting to get to me.",
+			"nameText": "Steve",
+			"vnStage": {
+				
+			}
+		},
+		"col2": {
+			"type": "text",
+			"next": "col3",
+			"text": "I know college has been tough on you, but you were doing okay before. Not great, yeah, but okay. Come on, man, I know it's not just that.",
+			"nameText": "Mitch",
+			"vnStage": {
+				"steve": {
+					"image": "steve_sad",
+					"fade": true
+				},
+				"mitch": {
+					"image": "mitch_talk_reversed",
+					"fade": false
+				}
+			}
+		},
+		"col3": {
+			"type": "text",
+			"next": "col3a",
+			"text": "I'm still freaked out about last night. I can't stop thinking about it, and I can't focus on anything else. It just keeps coming back to all that shit.",
+			"nameText": "Steve",
+			"vnStage": {
+				"steve": {
+					"image": "steve",
+					"fade": false
+				},
+				"mitch": {
+					"image": "mitch_reversed",
+					"fade": true
+				}
+			}
+		},
+		"col3a": {
+			"type": "text",
+			"next": "col3b",
+			"text": "It's not just the monsters. Don't get me wrong, those monsters, Shades or whatever, scare the shit out of me. I don't even want to think about what the fact that they exist means.",
+			"nameText": "Steve"
+		},
+		"col3b": {
+			"type": "text",
+			"next": "col3c",
+			"text": "No, it's the whole magical girl thing. I should be pissed off about even being called a girl, right? But I don't know, that didn't really bug me. And I just felt different as a magical girl. I felt better. Alive in a way that I've never felt before.",
+			"nameText": "Steve"
+		},
+		"col3c": {
+			"type": "text",
+			"next": "col4",
+			"text": "Maybe it's the magic? I don't know. I know I'm overthinking again.",
+			"nameText": "Steve"
+		},
+		"col4": {
+			"type": "text",
+			"next": "col5",
+			"text": "So... stop thinking about it. Like I said, man, you're just gonna drive yourself nuts. I've moved on, and I'm doing fine.",
+			"nameText": "Mitch",
+			"vnStage": {
+				"steve": {
+					"image": "steve_sad",
+					"fade": true
+				},
+				"mitch": {
+					"image": "mitch_talk_reversed",
+					"fade": false
+				}
+			}
+		},
+		"col5": {
+			"type": "text",
+			"next": "col6",
+			"text": "Are you? Have you?",
+			"nameText": "Steve",
+			"vnStage": {
+				"steve": {
+					"image": "steve",
+					"fade": false
+				},
+				"mitch": {
+					"image": "mitch_reversed",
+					"fade": true
+				}
+			}
+		},
+		"col6": {
+			"type": "text",
+			"next": "end1",
+			"text": "Yeah. Of course.",
+			"nameText": "Mitch",
+			"vnStage": {
+				"steve": {
+					"image": "steve_sad",
+					"fade": true
+				},
+				"mitch": {
+					"image": "mitch_talk_reversed",
+					"fade": false
+				}
+			}
+		},
+		"end1": {
+			"type": "text",
+			"next": "end2",
+			"text": "...",
+			"options": {
+				"hideNameText": true
+			},
+			"vnStage": {
+				"steve": {
+					"image": "steve_sad",
+					"fade": false
+				},
+				"mitch": {
+					"fade": false,
+					"image": "mitch_tense_reversed"
+				}
+			}
+		},
+		"end2": {
+			"type": "text",
+			"next": "meta.return",
+			"text": "Hey, I'll see you at the house tonight, okay? I've still got another class this afternoon, and I should get moving.",
+			"nameText": "Steve",
+			"vnStage": {
+				"steve": {
+					"image": "steve",
+					"fade": false
+				},
+				"mitch": {
+					"image": "mitch_reversed",
+					"fade": true
+				}
+			}
+		}
+	}
+}

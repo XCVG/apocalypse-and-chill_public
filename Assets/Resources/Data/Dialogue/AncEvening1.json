@@ -1,0 +1,77 @@
+{
+	"position": "character",
+	"default": "m1",
+	"options": {
+	  "panelHeight": "half"
+	},
+	"background": "",
+	"frames": {
+		"m1": {
+			"type": "text",
+			"next": "m2",
+			"text": "Fuck.",
+			"nameText": "Steve",
+			"vnStage": {
+				"steve": {
+					"image": "steve",
+					"x": -100,
+					"y": 0,
+					"z": 1
+				}
+			}
+		},
+		"m2": {
+			"type": "text",
+			"next": "m3",
+			"text": "How did I do this last time?",
+			"nameText": "Steve",
+			"vnStage": {
+			}
+		},
+		"m3": {
+			"type": "text",
+			"next": "m4",
+			"text": "Right. I blacked out and woke up a magical girl. I could try knocking myself out, but I don't think that would work.",
+			"nameText": "Steve",
+			"vnStage": {
+			}
+		},
+		"m4": {
+			"type": "text",
+			"next": "m5",
+			"text": "Okay. Deep breaths. Find the power within you and unleash it. Do the new age bullshit.",
+			"nameText": "Steve",
+			"vnStage": {
+			}
+		},
+		"m5": {
+			"type": "text",
+			"next": "m6",
+			"text": "...",
+			"nameText": "Steve",
+			"options": {
+				"hideNameText": true
+			},
+			"vnOptions": {
+				"typeOn": false,
+				"postPresentScript": "AncScripts.EveningTryTransform"
+			},
+			"vnStage": {
+				"steve": {
+					"image": "steve_neutral"
+				}
+			}
+		},
+		"m6": {
+			"type": "text",
+			"next": "meta.return",
+			"text": "Okay, I felt something. I'm pretty sure that was magical power, and not just pissing myself. Just gotta.... focus?",
+			"nameText": "Steve",
+			"vnStage": {
+				"steve": {
+					"image": "steve"
+				}
+			}
+		}
+	}
+}

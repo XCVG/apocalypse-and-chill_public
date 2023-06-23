@@ -1,0 +1,189 @@
+{
+	"position": "character",
+	"default": "intro1",
+	"options": {
+	  "panelHeight": "half"
+	},
+	"frames": {
+		"intro1": {
+			"type": "text",
+			"background": "GhettoMatrix",
+			"options": {
+				"hideNameText": true
+			},
+			"nameText": "",
+			"text": "Let me tell you why you're here. You're here because you know something. What you know you can't explain, but you feel it.",
+			"next": "intro2"
+			
+		},
+		"intro2": {
+			"type": "text",
+			"background": "GhettoMatrix",
+			"options": {
+				"hideNameText": true
+			},
+			"nameText": "",
+			"text": "You've felt it your entire life, that there's something wrong with the world. You don't know what it is, but it's there, like a splinter in your mind, driving you mad.",
+			"next": "intro3"
+		},
+		"intro3": {
+			"type": "text",
+			"background": "GhettoMatrix",
+			"options": {
+				"hideNameText": true
+			},
+			"nameText": "",
+			"text": "It is this feeling that has brought you to me. Do you know what I'm talking about?",
+			"next": "intro4"
+		},
+		"intro4": {
+			"type": "text",
+			"background": "GhettoMatrix",
+			"options": {
+				"hideNameText": true
+			},
+			"nameText": "",
+			"text": "The Matrix.",
+			"next": "intro5"
+		},
+		"intro5": {
+			"type": "text",
+			"background": "GhettoMatrix2",
+			"nameText": "Steve",
+			"text": "The Matrix.",
+			"next": "intro6",
+			"vnOptions": {
+				"typeOn": false
+			}
+		},
+		"intro6": {
+			"type": "text",
+			"background": "GhettoMatrix2",
+			"nameText": "Steve",
+			"text": "I can't believe I have to watch this movie for school again. I feel like I just watched it for English 12- well, that wasn't even a year ago. At least it's a contemporary media course, so no Shakespeare.",
+			"next": "introw1"
+		},
+		"introw1": {
+			"type": "text",
+			"nameText": "Steve",
+			"background": "SteveBedroom",
+			"text": "I mean, it wasn't that long ago. I could just say I watched it. There'll be questions, but I can probably fake my way through. Could play some Warzone instead.",
+			"next": "introw2",
+			"options": {
+			  "panelHeight": "half"
+			},
+			"vnStage": {
+				"steve": {
+					"image": "steve",
+					"x": -400,
+					"y": 0
+				}
+			}
+		},
+		"introw2": {
+			"type": "choice",
+			"text": "Finish the movie or play a game?",
+			"background": "SteveBedroom",
+			"options": {
+			  "panelHeight": "full",
+			  "hideNameText": true
+			},
+			"choices": [
+			  {
+				"text": "Finish watching The Matrix",
+				"next": "this.introwa1",
+				"microscript": [
+					{
+						"flag": "WatchedTheMatrix",
+						"set": true
+					}
+				]
+			  },
+			  {
+				"text": "Play some Warzone",
+				"next": "this.introwb1"
+			  }
+			],
+			"vnStage": {
+				"steve": {
+					"image": "steve_neutral"
+				}
+			}
+		},
+		"introwa1": {
+			"type": "text",
+			"nameText": "Steve",
+			"background": "SteveBedroom",
+			"text": "I'm going to actually finish the movie. College is hard, and I'm supposed to get good grades.",
+			"next": "introw3",
+			"options": {
+			  "panelHeight": "half"
+			},
+			"vnStage": {
+				"steve": {
+					"image": "steve"
+				}
+			}
+		},
+		"introwb1": {
+			"type": "text",
+			"nameText": "Steve",
+			"background": "SteveBedroom",
+			"text": "College is too damn stressful. There's no point pushing it, I'm going to unwind online.",
+			"next": "introw3",
+			"options": {
+			  "panelHeight": "half"
+			},
+			"vnStage": {
+				"steve": {
+					"image": "steve"
+				}
+			}
+		},
+		"introw3": {
+            "type": "blank",
+            "conditional": [
+                {
+                    "next": "meta.return",
+                    "conditions": []
+                }
+            ]
+        },
+		"vn1": {
+			"type": "text",
+			"nameText": "Steve",
+			"text": "VN stuff!",
+			"next": "vn2",
+			"options": {
+			  "panelHeight": "half"
+			},
+			"vnStage": {
+				"steve": {
+					"image": "teststeve",
+					"x": -500,
+					"y": 0
+				}
+			}
+		},
+		"vn2": {
+			"type": "text",
+			"nameText": "Not Steve",
+			"text": "Another guy!",
+			"next": "started1",
+			"options": {
+			  "panelHeight": "half"
+			},
+			"vnStage": {
+				"steve": {
+					"fade": true
+				},
+				"notsteve": {
+					"image": "teststeve",
+					"x": 500,
+					"y": 0,
+					"flip": true
+				}
+			}
+		}
+	}
+}

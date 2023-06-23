@@ -1,0 +1,842 @@
+{
+	"position": "character",
+	"default": "a1",
+	"options": {
+	  "panelHeight": "half"
+	},
+	"background": "ParkNight",
+	"frames": {
+		"a1": {
+			"type": "text",
+			"next": "a2",
+			"text": "...",
+			"options": {
+				"hideNameText": true
+			},
+			"vnStage": {
+				"steve": {
+					"image": "steph",
+					"x": -500,
+					"y": 0,
+					"z": 5
+				},
+				"tiff": {
+					"image": "tiff",
+					"x": 500,
+					"y": 0,
+					"z": 1
+				},
+				"nguyen": {
+					"image": "nguyen",
+					"x": 200,
+					"y": 0
+				}
+			}
+		},
+		"a2": {
+			"type": "text",
+			"next": "a3",
+			"text": "Relax. We really aren't here to kill you.",
+			"nameText": "???",
+			"vnStage": {
+				"steve": {
+					"fade": true
+				},
+				"tiff": {
+					"fade": true
+				},
+				"nguyen": {
+					"image": "nguyen_talk",
+					"fade": false
+				}
+			}
+		},
+		"a3": {
+			"type": "text",
+			"next": "a4",
+			"text": "Wynn, I know what you mean but saying it that way is just going to scare her more.",
+			"nameText": "???",
+			"vnStage": {
+				"steve": {
+					"fade": true
+				},
+				"tiff": {
+					"image": "tiff_talk",
+					"fade": false
+				},
+				"nguyen": {
+					"image": "nguyen",
+					"fade": true
+				}
+			}
+		},
+		"a4": {
+			"type": "text",
+			"next": "a5",
+			"text": "I'm Tiff. This is Wynn. We're magical girls, and so are you.",
+			"nameText": "Tiff",
+			"vnStage": {
+				
+			}
+		},
+		"a4a": {
+			"type": "text",
+			"next": "a5",
+			"text": "That monster didn't give you those powers. Just made you desperate enough to unleash something that's always been within you.",
+			"nameText": "Tiff",
+			"vnStage": {
+				
+			}
+		},
+		"a5": {
+			"type": "text",
+			"next": "a5a",
+			"text": "That must have been quite a surprise. It was for me, too, when I first found out. I discovered my powers when I was attacked, kinda like you.",
+			"nameText": "Wynn?",
+			"vnStage": {
+				"steve": {
+					"fade": true
+				},
+				"tiff": {
+					"image": "tiff",
+					"fade": true
+				},
+				"nguyen": {
+					"image": "nguyen_talk",
+					"fade": false
+				}
+			}
+		},
+		"a5a": {
+			"type": "text",
+			"next": "a6",
+			"text": "I didn't catch your name, by the way...",
+			"nameText": "Wynn",
+			"vnStage": {
+				
+			}
+		},
+		"a6": {
+			"type": "text",
+			"next": "a7",
+			"text": "I'm, um... Stephanie.",
+			"nameText": "Stephanie",
+			"vnStage": {
+				"steve": {
+					"image": "steph_talk",
+					"fade": false
+				},
+				"tiff": {
+					"image": "tiff",
+					"fade": true
+				},
+				"nguyen": {
+					"image": "nguyen",
+					"fade": true
+				}
+			}
+		},
+		"a7": {
+			"type": "text",
+			"next": "a8",
+			"text": "It's nice to meet you, Stephanie.",
+			"nameText": "Tiff",
+			"vnStage": {
+				"steve": {
+					"image": "steph",
+					"fade": true
+				},
+				"tiff": {
+					"image": "tiff_talk",
+					"fade": false
+				},
+				"nguyen": {
+					"image": "nguyen",
+					"fade": true
+				}
+			}
+		},
+		"a8": {
+			"type": "text",
+			"next": "root",
+			"text": "I'm sure you've got lots of questions, so ask away.",
+			"nameText": "Tiff",
+			"vnStage": {
+				
+			}
+		},
+		"root": {
+			"type": "choice",
+			"text": "",
+			"options": {
+			  "panelHeight": "full",
+			  "hideNameText": true
+			},
+			"choices": [
+			  {
+				"text": "What were those things that attacked us?",
+				"next": "this.attack1",
+				"showCondition": {
+					"noflag": "AncParkNight_Attack"
+				},
+				"microscript": [
+					{
+					  "flag": "AncParkNight_Attack",
+					  "set": true
+					}
+				]
+			  },
+			  {
+				"text": "What do you mean I'm a magical girl?",
+				"next": "this.mg1",
+				"showCondition": {
+					"noflag": "AncParkNight_Mg"
+				},
+				"microscript": [
+					{
+					  "flag": "AncParkNight_Mg",
+					  "set": true
+					}
+				]
+			  },
+			  {
+				"text": "Why were you there at my house?",
+				"next": "this.why1",
+				"showCondition": {
+					"noflag": "AncParkNight_Why"
+				},
+				"microscript": [
+					{
+					  "flag": "AncParkNight_Why",
+					  "set": true
+					}
+				]
+			  },
+			  {
+				"text": "Why do we need to keep this secret?",
+				"next": "this.secret1",
+				"showCondition": {
+					"noflag": "AncParkNight_Secret"
+				},
+				"microscript": [
+					{
+					  "flag": "AncParkNight_Secret",
+					  "set": true
+					}
+				]
+			  },
+			  {
+				"text": "I think that's it",
+				"next": "this.none1",
+				"showCondition": {
+					"exec": "AncScripts.HasAllFlags",
+					"arg": "AncParkNight_Attack,AncParkNight_Mg,AncParkNight_Why,AncParkNight_Secret"
+				}
+			  }
+			],
+			"vnStage": {
+				"steve": {
+					"image": "steph",
+					"fade": false
+				},
+				"tiff": {
+					"image": "tiff",
+					"fade": false
+				},
+				"nguyen": {
+					"image": "nguyen",
+					"fade": false
+				}
+			}
+		},
+		"secret1": {
+			"type": "text",
+			"next": "secret2",
+			"text": "Why do we need to keep this a secret? Shouldn't people know? Shouldn't someone higher up be dealing with this stuff?",
+			"nameText": "Stephanie",
+			"vnStage": {
+				"steve": {
+					"image": "steph_talk",
+					"fade": false
+				},
+				"tiff": {
+					"image": "tiff",
+					"fade": true
+				},
+				"nguyen": {
+					"image": "nguyen",
+					"fade": true
+				}
+			}
+		},
+		"secret2": {
+			"type": "text",
+			"next": "secret3",
+			"text": "I mean, you saw how your friend reacted. He didn't take it too well, did he?",
+			"nameText": "Wynn",
+			"vnStage": {
+				"steve": {
+					"image": "steph",
+					"fade": true
+				},
+				"tiff": {
+					"image": "tiff",
+					"fade": true
+				},
+				"nguyen": {
+					"image": "nguyen_talk",
+					"fade": false
+				}
+			}
+		},
+		"secret3": {
+			"type": "text",
+			"next": "root",
+			"text": "Our little group of magical girls has a handle on things. If we went to, say, the police, they'd just think we're crazy.",
+			"nameText": "Wynn",
+			"vnStage": {
+				"steve": {
+					"image": "steph",
+					"fade": true
+				},
+				"tiff": {
+					"image": "tiff",
+					"fade": true
+				},
+				"nguyen": {
+					"image": "nguyen_talk",
+					"fade": false
+				}
+			}
+		},
+		"why1": {
+			"type": "text",
+			"next": "why2",
+			"text": "Why were you there at my house? It was kind of creepy how you just showed up.",
+			"nameText": "Stephanie",
+			"vnStage": {
+				"steve": {
+					"image": "steph_talk",
+					"fade": false
+				},
+				"tiff": {
+					"image": "tiff",
+					"fade": true
+				},
+				"nguyen": {
+					"image": "nguyen",
+					"fade": true
+				}
+			}
+		},
+		"why2": {
+			"type": "text",
+			"next": "why3",
+			"text": "Yeah, I guess it was, wasn't it? We knew there's been a lot of Shade activity in your area so we've been trying to patrol and cut them down when we can.",
+			"nameText": "Tiff",
+			"vnStage": {
+				"steve": {
+					"image": "steph",
+					"fade": true
+				},
+				"tiff": {
+					"image": "tiff_talk",
+					"fade": false
+				},
+				"nguyen": {
+					"image": "nguyen",
+					"fade": true
+				}
+			}
+		},
+		"why3": {
+			"type": "text",
+			"next": "root",
+			"text": "When we saw them surrounding your house, we rushed in to help.",
+			"nameText": "Tiff",
+			"vnStage": {
+				
+			}
+		},
+		"mg1": {
+			"type": "text",
+			"next": "mg2",
+			"text": "You said I'm a magical girl. Like Sailor Moon? What does that really mean?",
+			"nameText": "Stephanie",
+			"vnStage": {
+				"steve": {
+					"image": "steph_talk",
+					"fade": false
+				},
+				"tiff": {
+					"image": "tiff",
+					"fade": true
+				},
+				"nguyen": {
+					"image": "nguyen",
+					"fade": true
+				}
+			}
+		},
+		"mg2": {
+			"type": "text",
+			"next": "mg3",
+			"text": "Kind of like Sailor Moon, I guess. Don't worry, it's not like Madoka Magica, if that's what you were thinking.",
+			"nameText": "Wynn",
+			"vnStage": {
+				"steve": {
+					"image": "steph",
+					"fade": true
+				},
+				"tiff": {
+					"image": "tiff",
+					"fade": true
+				},
+				"nguyen": {
+					"image": "nguyen_talk",
+					"fade": false
+				}
+			}
+		},
+		"mg3": {
+			"type": "text",
+			"next": "mg4",
+			"text": "I was not. I have no idea what that is.",
+			"nameText": "Stephanie",
+			"vnStage": {
+				"steve": {
+					"image": "steph_talk",
+					"fade": false
+				},
+				"nguyen": {
+					"image": "nguyen",
+					"fade": true
+				}
+			}
+		},
+		"mg4": {
+			"type": "text",
+			"next": "mg5",
+			"text": "We don't really know where our powers come from. Just that we have them.",
+			"nameText": "Tiff",
+			"vnStage": {
+				"steve": {
+					"image": "steph",
+					"fade": true
+				},
+				"tiff": {
+					"image": "tiff_talk",
+					"fade": false
+				}
+			}
+		},
+		"mg4a": {
+			"type": "text",
+			"next": "mg5",
+			"text": "",
+			"nameText": "Tiff",
+			"vnStage": {
+				
+			}
+		},
+		"mg5": {
+			"type": "text",
+			"next": "mg6",
+			"text": "We can transform into these alternate forms more or less at will, and when we do, we have protective barriers and magical powers.",
+			"nameText": "Tiff",
+			"vnStage": {
+				
+			}
+		},
+		"mg6": {
+			"type": "text",
+			"next": "mg7",
+			"text": "Not to mention these cute outfits!",
+			"nameText": "Wynn",
+			"vnStage": {
+				"tiff": {
+					"image": "tiff",
+					"fade": true
+				},
+				"nguyen": {
+					"image": "nguyen_talk",
+					"fade": false
+				}
+			}
+		},
+		"mg7": {
+			"type": "text",
+			"next": "mg8",
+			"text": "There's a lot more to it, and a lot we don't understand. I'm not an expert, and neither is Tiff. Some of our friends know a bit more.",
+			"nameText": "Wynn",
+			"vnStage": {
+
+			}
+		},
+		"mg8": {
+			"type": "text",
+			"next": "root",
+			"text": "Yeah, we have a group here in the Lower Mainland. We call each other for reinforcements and sometimes to just hang out.",
+			"nameText": "Tiff",
+			"vnStage": {
+				"nguyen": {
+					"image": "nguyen",
+					"fade": true
+				},
+				"tiff": {
+					"image": "tiff_talk",
+					"fade": false
+				}
+			}
+		},
+		"attack1": {
+			"type": "text",
+			"next": "attack2",
+			"text": "What were those things that attacked us? Some kind of monsters?",
+			"nameText": "Stephanie",
+			"vnStage": {
+				"steve": {
+					"image": "steph_talk",
+					"fade": false
+				},
+				"tiff": {
+					"image": "tiff",
+					"fade": true
+				},
+				"nguyen": {
+					"image": "nguyen",
+					"fade": true
+				}
+			}
+		},
+		"attack2": {
+			"type": "text",
+			"next": "attack3",
+			"text": "They're called Shades. They're basically monsters of darkness that drain the life force from people.",
+			"nameText": "Tiff",
+			"vnStage": {
+				"steve": {
+					"image": "steph",
+					"fade": true
+				},
+				"tiff": {
+					"image": "tiff_talk",
+					"fade": false
+				}
+			}
+		},
+		"attack3": {
+			"type": "text",
+			"next": "attack4",
+			"text": "Well, we call them Shades. They don't have a scientific name, at least not that we know of.",
+			"nameText": "Wynn",
+			"vnStage": {
+				"tiff": {
+					"image": "tiff",
+					"fade": true
+				},
+				"nguyen": {
+					"image": "nguyen_talk",
+					"fade": false
+				}
+			}
+		},
+		"attack4": {
+			"type": "text",
+			"next": "attack5",
+			"text": "We don't <i>really</i> know what they are or where they come from. But they're bad news, so we try to destroy them before they can harm anyone else.",
+			"nameText": "Tiff",
+			"vnStage": {
+				"nguyen": {
+					"image": "nguyen",
+					"fade": true
+				},
+				"tiff": {
+					"image": "tiff_talk",
+					"fade": false
+				}
+			}
+		},
+		"attack5": {
+			"type": "text",
+			"next": "root",
+			"text": "The specific kind you fought are ones we haven't seen in a while. Not particularly powerful, but they have those weird scary looking arms",
+			"nameText": "Tiff",
+			"vnStage": {
+				
+			}
+		},
+		"none1": {
+			"type": "text",
+			"next": "end1",
+			"text": "I think that's all my questions. I should get back before Mitch comes gunning...",
+			"nameText": "Stephanie",
+			"vnStage": {
+				"steve": {
+					"image": "steph_talk",
+					"fade": false
+				},
+				"tiff": {
+					"image": "tiff",
+					"fade": true
+				},
+				"nguyen": {
+					"image": "nguyen",
+					"fade": true
+				}
+			}
+		},
+		"end1": {
+			"type": "text",
+			"next": "end2",
+			"text": "The hell? Uh, I feel kinda funny. Like my power is fading somehow?",
+			"nameText": "Stephanie",
+			"vnStage": {
+				"steve": {
+					"image": "steph_concerned",
+					"fade": false
+				},
+				"tiff": {
+					"image": "tiff",
+					"fade": true
+				},
+				"nguyen": {
+					"image": "nguyen",
+					"fade": true
+				}
+			}
+		},
+		"end2": {
+			"type": "text",
+			"next": "end3",
+			"text": "Well, the fight is over, and you don't need to be in magical mode anymore. That's probably your signal to turn back.",
+			"nameText": "Tiff",
+			"vnStage": {
+				"steve": {
+					"image": "steph",
+					"fade": true
+				},
+				"tiff": {
+					"image": "tiff_talk",
+					"fade": false
+				}
+			}
+		},
+		"end3": {
+			"type": "text",
+			"next": "end4",
+			"text": "Turn... back?",
+			"nameText": "Stephanie",
+			"vnStage": {
+				"steve": {
+					"image": "steph_concerned",
+					"fade": false
+				},
+				"tiff": {
+					"image": "tiff",
+					"fade": true
+				}
+			}
+		},
+		"end4": {
+			"type": "text",
+			"next": "end6b",
+			"text": "Yeah, normally us magical girls only transform to fight, and then we turn back. You're new to this, so I'm not surprised you can't hold that form very long.",
+			"nameText": "Tiff",
+			"vnStage": {
+				"steve": {
+					"fade": true
+				},
+				"tiff": {
+					"image": "tiff_talk",
+					"fade": false
+				},
+				"nguyen": {
+					"image": "nguyen",
+					"fade": true
+				}
+			}
+		},
+		"end5": {
+			"type": "text",
+			"next": "end6",
+			"text": "Gina could, even when she was new, and before, y'know, that incident with Delora.",
+			"nameText": "Wynn",
+			"vnStage": {
+				"steve": {
+					"image": "steph_panicked"
+				},
+				"tiff": {
+					"image": "tiff",
+					"fade": true
+				},
+				"nguyen": {
+					"image": "nguyen_talk",
+					"fade": false
+				}
+			}
+		},
+		"end6": {
+			"type": "text",
+			"next": "end6a",
+			"text": "She's an exception to just about everything, though. Not helping, Wynn.",
+			"nameText": "Tiff",
+			"vnStage": {
+				"steve": {
+					"fade": true
+				},
+				"tiff": {
+					"image": "tiff_talk",
+					"fade": false
+				},
+				"nguyen": {
+					"image": "nguyen",
+					"fade": true
+				}
+			}
+		},
+		"end6a": {
+			"type": "text",
+			"next": "end7",
+			"text": "Right, sorry. Ignore what I said. Basically, just let go and let yourself return to your normal form.",
+			"nameText": "Wynn",
+			"vnStage": {
+				"tiff": {
+					"image": "tiff",
+					"fade": true
+				},
+				"nguyen": {
+					"image": "nguyen_talk",
+					"fade": false
+				}
+			}
+		},
+		"end6b": {
+			"type": "text",
+			"next": "end7",
+			"text": "Basically, just let go and let yourself return to your normal form. Don't try to fight it, it's just going to make it worse. Just let it happen.",
+			"nameText": "Wynn",
+			"vnStage": {
+				"tiff": {
+					"image": "tiff",
+					"fade": true
+				},
+				"nguyen": {
+					"image": "nguyen_talk",
+					"fade": false
+				}
+			}
+		},
+		"end7": {
+			"type": "text",
+			"next": "post0",
+			"text": "Let it happen? Shit. I, uh, gotta go, bye!",
+			"nameText": "Stephanie",
+			"vnStage": {
+				"steve": {
+					"image": "steph_panicked",
+					"fade": false
+				},
+				"tiff": {
+					"image": "tiff",
+					"fade": true
+				},
+				"nguyen": {
+					"image": "nguyen",
+					"fade": true
+				}
+			}
+		},
+		"post0": {
+			"type": "text",
+			"next": "meta.return",
+			"nameText": "Wynn",
+			"text": "...",
+			"options": {
+				"hideNameText": true
+			},
+			"vnOptions": {
+				"typeOn": false
+				
+			},
+			"vnStage": {
+				"steve": {
+					"visible": false
+				},
+				"tiff": {
+					"fade": false
+				},
+				"nguyen": {
+					"fade": false
+				}
+			}
+		},
+		"post1": {
+			"type": "text",
+			"next": "post2",
+			"text": "That was weird.",
+			"nameText": "Nguyen",
+			"vnStage": {
+				"steve": {
+					"visible": false
+				},
+				"tiff": {
+					"image": "tiff",
+					"fade": true
+				},
+				"nguyen": {
+					"image": "nguyen_talk",
+					"fade": false
+				}
+			}
+		},
+		"post2": {
+			"type": "text",
+			"next": "post3",
+			"text": "It was going so well before she panicked, too.",
+			"nameText": "Tiff",
+			"vnStage": {
+				"tiff": {
+					"image": "tiff_talk",
+					"fade": false
+				},
+				"nguyen": {
+					"image": "nguyen",
+					"fade": true
+				}
+			}
+		},
+		"post3": {
+			"type": "text",
+			"next": "post4",
+			"text": "Yeah. We shouldn't have volunteered to handle this onboarding. Sakura is way better at it.",
+			"nameText": "Nguyen",
+			"vnStage": {
+				"tiff": {
+					"image": "tiff",
+					"fade": true
+				},
+				"nguyen": {
+					"image": "nguyen_talk",
+					"fade": false
+				}
+			}
+		},
+		"post4": {
+			"type": "text",
+			"next": "meta.return",
+			"text": "Yup.",
+			"nameText": "Tiff",
+			"vnStage": {
+				"tiff": {
+					"image": "tiff_talk",
+					"fade": false
+				},
+				"nguyen": {
+					"image": "nguyen",
+					"fade": true
+				}
+			}
+		}
+	}
+}

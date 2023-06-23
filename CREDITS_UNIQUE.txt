@@ -1,0 +1,78 @@
+TECH/GENERAL
+
+.NET Foundation and Contributors
+Antonio Cobo
+Kalle Jillheden
+Microsoft Corportaion
+Modest Tree Media
+Unity Technologies
+
+
+GRAPHICS/FONTS
+
+Christian Robertson
+Graham Meade
+The Raleway Project Authors
+Steve Matteson
+
+SOUND EFFECTS
+
+.name
+altfuture
+blaukreuz
+Blender Foundation
+cmusounddesign
+david_werecat
+DylanTheFish
+gsb1039
+Independent.nu
+jobro
+john129pats
+kdemani
+kevinkace
+Kneeling
+leohpaz
+LokiF
+MinigunFiend
+NachtmahrTV
+nioczkus
+qubodup
+rafaelzimrp
+ViRiX
+YUXUANZHAO
+
+Impact by Iwan 'qubodup' Gabovitch http://opengameart.org/users/qubodup
+
+Some of the sounds in this project were created by ViRiX Dreamcore (David Mckee) www.soundcloud.com/virix
+
+
+MUSIC
+
+HitCtrl - Beach Town Guitar Theme
+ISAo - Emotional Battle Progressive Dance
+ISAo - Emotional Strings Dramatic Battle Scene
+ISAo - Intense Digital Rock Theme
+ISAo - Sad Scene Pianoforte
+Joseph Gilbert / Kistol - Snowfall
+pixelsphere.org - Mysterious Ambience (song21)
+Type 42 - Ascendance (Electronic Soundtrack)
+Zander Noriega - Perpetual Tension
+
+SOUND AIRYLUVS by ISAo https://airyluvs.com/
+
+Music by Type 42 - type42.bandcamp.com
+
+
+SPECIAL THANKS (?)
+
+I think I'll do a dedication this time.
+
+For those too afraid to live their best life, those who never got the chance, and those that did.
+
+END TEXT
+
+Copyright (c) 2022 Chris Leclair where applicable. All rights reserved.
+
+All third party assets remain the property of their respective owners, and are used with permission explicit or implicit.
+
+The story, all names, characters, and incidents portrayed within this work are fictitious or used fictitiously. No identification with actual persons (living or deceased), places, or products is intended or should be inferred.

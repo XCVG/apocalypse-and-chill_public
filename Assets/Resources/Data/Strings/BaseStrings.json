@@ -1,0 +1,11 @@
+{
+  "IGUI": {
+    "Welcome": "Wilkommen",
+	"WindowTitle": "See Who I Am"
+  },
+  "IGUI_STATS": {
+    "SecurityMechanisms": "Lockpicking",
+    "SecurityComputers": "Hacking"
+  },
+  "TEST": {}
+}

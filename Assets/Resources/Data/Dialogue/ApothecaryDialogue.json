@@ -1,0 +1,410 @@
+{
+	"default": "start",
+    "position": "character",
+    "options": {
+        "panelHeight": "half",
+		"hideObjects": ["Apothecary"]
+    },
+	"frames": {
+		"start": {
+            "type": "blank",
+            "conditional": [
+                {
+                    "next": "this.main",
+                    "conditions": []
+                },
+                {
+                    "next": "this.first1",
+                    "conditions": [
+                        {
+                            "noflag": "ApothecaryTalkedTo"
+                        }
+                    ]
+                }
+            ]
+        },
+		"first1": {
+			"type": "choice",
+            "text": "Not often I see a noble lady, much less one pretending to be a knight. What brings you to my strange abode? M'lady.",
+            "image": "apothecary",
+            "nameText": "Apothecary",
+            "options": {
+                "panelHeight": "fixed",
+                "panelHeightPixels": 250
+            },
+			"microscript": [
+				{
+                    "flag": "ApothecaryTalkedTo",
+					"set": true
+                }
+			],
+            "choices": [	
+				{
+                    "text": "I was given this recipe. What do you make of it?",
+                    "next": "this.potion1",
+					"showCondition": {
+						"quest": "MarekPotionQuest",
+						"equal": 10
+					  }
+                },	
+				{
+					"text": "I'm just looking around.",
+					"next": "this.firsta1"
+				},		
+				{
+					"text": "I'm curious about what you do.",
+					"next": "this.firsta1"
+				}
+            ]
+		},
+		"firsta1": {
+			"type": "text",
+            "text": "Hmph.",
+            "image": "apothecary",
+            "nameText": "Apothecary",
+			"next": "main"
+		},
+		"potion1": {
+			"type": "text",
+            "text": "Hmm... I wouldn't have thought of it myself, and it is a bit strange, but it ought to be a potent elixir. It shall restore your vitality, just as the Librarian says.",
+            "image": "apothecary",
+            "nameText": "Apothecary",
+			"next": "potion2",
+			"microscript": [
+				{
+                    "item": "potionrecipe",
+					"take": 1
+                }
+			]
+		},
+		"potion2": {
+			"type": "choice",
+			"options": {
+                "panelHeight": "fixed",
+                "panelHeightPixels": 250
+            },
+            "text": "It is not a simple recipe, but yes, I could brew a batch... if I had the correct ingredients. I fear I do not have any purple bell. It is a rare plant, and there is only one place in the valley where it is grown: the walled garden north of the village.",
+            "image": "apothecary",
+            "nameText": "Apothecary",
+			"next": "potion3",
+			"choices": [
+				{
+					"text": "Walls aren't a problem. What am I looking for?",
+					"next": "this.potion3"
+				},
+                {
+                    "text": "How can I get it, then?",
+                    "next": "this.potion2b1"
+                }
+			]
+		},
+		"potion2b1": {
+			"type": "text",
+            "text": "With gold or sweet-talk? Scale the walls, mayhaps? I know not, I am a simple apothecary. That is for you to figure out.",
+            "image": "apothecary",
+            "nameText": "Apothecary",
+			"next": "potion3"
+		},
+		"potion3": {
+			"type": "text",
+			"options": {
+                "panelHeight": "fixed",
+                "panelHeightPixels": 200
+            },
+            "text": "It is a leafy plant with small purple berries. I will need a score or so of the berries, perhaps five plants. Six is better. The juice will stain your fingers for weeks and likely burn your delicate noble-lady skin, so perhaps have your servants pick them in your stead. Or at least keep your gloves on, and be careful to not let the juice soak through.",
+            "image": "apothecary",
+            "nameText": "Apothecary",
+			"next": "potion4",
+			"conditional": [
+				{
+					"next": "potion4",
+					"conditions": []
+				},
+				{
+					"next": "potion4a",
+					"conditions": [
+						{
+                            "exec": "MEScripts.ApothecaryHaveEnoughPlants"
+                        }
+					]
+				}
+			]
+		},
+		"potion4": {
+			"type": "text",
+            "text": "Once you have the purple bell, return to me and I shall brew a batch. I will take some for myself, and that will be payment enough.",
+            "image": "apothecary",
+            "nameText": "Apothecary",
+			"next": "main",			
+			"microscript": [
+				{
+                    "quest": "MarekPotionQuest",
+					"set": 100
+                },
+				{
+                    "quest": "MarekQuest",
+					"set": 310
+                }
+			]
+		},
+		"potion4a": {
+			"type": "text",
+            "text": "Once you have the purple bell, return to me and I shall brew a batch. I will take some for myself, and that will be payment enough.",
+            "image": "apothecary",
+            "nameText": "Apothecary",
+			"next": "phasflowers2a",			
+			"microscript": [
+				{
+                    "quest": "MarekPotionQuest",
+					"set": 100
+                },
+				{
+                    "quest": "MarekQuest",
+					"set": 310
+                }
+			],
+			"nextText": "I think I already have the plants"
+		},
+		"pmain": {
+            "type": "blank",
+            "conditional": [
+                {
+                    "next": "this.pnoflowers1",
+                    "conditions": []
+                },
+                {
+                    "next": "this.phasflowers1",
+                    "conditions": [
+                        {
+                            "exec": "MEScripts.ApothecaryHaveEnoughPlants"
+                        }
+                    ]
+                }
+            ]
+        },
+		"pnoflowers1": {
+			"type": "text",
+            "text": "Do you have the purple bell?",
+            "image": "apothecary",
+            "nameText": "Apothecary",
+			"next": "pnoflowers2",
+			"nextText": "Not yet."
+		},
+		"pnoflowers2": {
+			"type": "text",
+            "text": "Can't make your elixir without the purple bell. I don't make the rules, m'lady.",
+            "image": "apothecary",
+            "nameText": "Apothecary",
+			"next": "this.main"
+		},
+		"phasflowers1": {
+			"type": "text",
+            "text": "Do you have the purple bell?",
+            "image": "apothecary",
+            "nameText": "Apothecary",
+			"next": "phasflowers2",
+			"nextText": "I have it."
+		},
+		"phasflowers2": {
+			"type": "text",
+            "text": "Sure can, then. Hand them over and I'll get started.",
+            "image": "apothecary",
+            "nameText": "Apothecary",
+			"next": "phasflowers3",
+			"nextText": "Just into your hands? Won't the juice burn you?"
+		},
+		"phasflowers2a": {
+			"type": "text",
+            "text": "Well, that's strangely fortunate. Hand them over and I'll get started.",
+            "image": "apothecary",
+            "nameText": "Apothecary",
+			"next": "phasflowers3",
+			"nextText": "Just into your hands? Won't the juice burn you?"
+		},
+		"phasflowers3": {
+			"type": "choice",
+			"options": {
+                "panelHeight": "fixed",
+                "panelHeightPixels": 250
+            },
+            "text": "I've got thick skin and calluses, and I'm not worried about some stains. Not a delicate noble girl with paper-thin skin. S'pose I appreciate your concern, though. M'lady.",
+            "image": "apothecary",
+            "nameText": "Apothecary",
+			"choices": [
+				{
+					"text": "Hey! I'm not delicate, and my skin isn't thin.",
+					"next": "this.pskin1"
+				},
+                {
+                    "text": "How long will this take?",
+                    "next": "this.phasflowers4"
+                }
+			]
+		},
+		"pskin1": {
+			"type": "text",
+            "text": "You can't be more than six stone soaking wet, you've got the face of a comfortable youth, and I've never seen you take off your gloves but I'll bet your hands are soft as silk beneath. You look more a girl playing dress-up than a hardened warrior. But please forgive my assumptions, m'lady. I'm just an old lady rambling.",
+            "image": "apothecary",
+            "nameText": "Apothecary",
+			"next": "phasflowers4"
+		},
+		"phasflowers4": {
+			"type": "text",
+            "text": "The brewing ought to be quick, but not instant. Come back later, say, on the morrow, and I'll have your elixirs for you..",
+            "image": "apothecary",
+            "nameText": "Apothecary",
+			"next": "main",
+			"microscript": [
+				{
+                    "quest": "MarekPotionQuest",
+					"set": 110
+                },
+				{
+                    "item": "magicflower",
+					"take": 99
+                }
+			]
+		},
+		"pnotready": {
+			"type": "text",
+            "text": "Not yet. Come back later, say, on the morrow.",
+            "image": "apothecary",
+            "nameText": "Apothecary",
+			"next": "main"
+		},
+		"pready": {
+			"type": "text",
+            "text": "Sure are. The batch turned out great, bigger yield than I thought. Might have sampled a bit. Already put them into vials for your ladyship. Not sure how effective they'll be, but it's safe, I tried some myself. Tastes a bit like mint, too.",
+            "image": "apothecary",
+            "nameText": "Apothecary",
+			"next": "main",
+			"microscript": [
+				{
+                    "quest": "MarekPotionQuest",
+					"set": 200
+                },
+				{
+                    "quest": "MarekQuest",
+					"set": 390
+                },
+				{
+                    "exec": "MEScripts.RefillPotions"
+                },
+				{
+					"item": "potionsample",
+					"give": 1
+				}
+			]
+		},
+		"pmore": {
+			"type": "text",
+            "text": "Sure are. The batch turned out great, bigger yield than I thought. Might have sampled a bit. Already put them into vials for your ladyship.",
+            "image": "apothecary",
+            "nameText": "Apothecary",
+			"next": "main",
+			"microscript": [
+				{
+                    "exec": "MEScripts.RefillPotions"
+                }
+			]
+		},
+		"main": {
+			"type": "choice",
+            "text": "M'lady.",
+            "image": "apothecary",
+            "nameText": "Apothecary",
+            "options": {
+                "panelHeight": "fixed",
+                "panelHeightPixels": 250
+            },
+            "choices": [	
+				{
+                    "text": "I was given this recipe. What do you make of it?",
+                    "next": "this.potion1",
+					"showCondition": {
+						"quest": "MarekPotionQuest",
+						"equal": 10
+					  }
+                },
+				{
+                    "text": "Can you make those elixirs for me?",
+                    "next": "this.pmain",
+					"showCondition": {
+						"quest": "MarekPotionQuest",
+						"equal": 100
+					  }
+                },
+				{
+                    "text": "Are the elixirs ready yet?",
+                    "next": "this.pnotready",
+					"showCondition": {
+						"quest": "MarekPotionQuest",
+						"equal": 110
+					  }
+                },		
+				{
+                    "text": "Are the elixirs ready yet?",
+                    "next": "this.pready",
+					"showCondition": {
+						"quest": "MarekPotionQuest",
+						"equal": 120
+					  }
+                },
+				{
+                    "text": "Do you have any more elixirs for me?",
+                    "next": "this.pmore",
+					"showCondition": {
+						"exec": "MEScripts.ApothecaryShowPotionsReady"
+					  }
+                },
+				{
+					"text": "What's your story?",
+					"next": "this.story1",
+					"showCondition": {
+						"flag": "ImpossibleFlag"
+					  }
+				},
+				{
+					"text": "Why do you live out here?",
+					"next": "this.house1"
+				},
+				{
+					"text": "Are your potions magical?",
+					"next": "this.magic1"
+				},
+                {
+                    "text": "I should go",
+                    "next": "meta.return"
+                }
+            ]
+		},
+		"house1": {
+			"type": "text",
+            "text": "The villagers, and aye, the Lord Westerhold himself, appreciate my services, but there is always distrust of the old lady with the strange herbs and strange ways. Superstition runs deep. Best for us all if I keep to myself.",
+            "image": "apothecary",
+            "nameText": "Apothecary",
+			"next": "main"
+		},
+		"magic1": {
+			"type": "text",
+            "text": "Are they? What is magical, and what is not?",
+            "image": "apothecary",
+            "nameText": "Apothecary",
+			"next": "magic2"
+		},
+		"magic2": {
+			"type": "text",
+            "text": "Some believe what I do is witchcraft. I know what works and what does not, but often I know not why that is. Perhaps otherworldly forces are involved. Perhaps they are entirely natural, and I simply do not understand them. Perhaps there is no different. And besides, can the same not be said of sowing crops, or folding steel?",
+            "image": "apothecary",
+            "nameText": "Apothecary",
+			"next": "magic3"
+		},
+		"magic3": {
+			"type": "text",
+            "text": "Bah. I am an old woman rambling. Apologies, m'lady.",
+            "image": "apothecary",
+            "nameText": "Apothecary",
+			"next": "main"
+		}
+	}
+}

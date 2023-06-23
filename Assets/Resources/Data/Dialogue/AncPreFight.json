@@ -1,0 +1,199 @@
+{
+	"position": "character",
+	"default": "a1",
+	"options": {
+	  "panelHeight": "half"
+	},
+	"background": "MitchRoom",
+	"frames": {
+		"a1": {
+			"type": "text",
+			"nameText": "Mitch",
+			"text": "Shut the door!",
+			"next": "a2",
+			"background": "MitchRoomDoorOpen",
+			"vnStage": {
+				"steve": {
+					"image": "steve_neutral",
+					"x": -250,
+					"y": 0,
+					"z": 1,
+					"fade": true
+				},
+				"mitch": {
+					"image": "mitch_yelling",
+					"x": -500,
+					"y": 0
+				}
+			}
+		},
+		"a2": {
+			"type": "text",
+			"next": "a3",
+			"options": {
+				"hideNameText": true
+			},
+			"background": "MitchRoom",
+			"vnOptions": {
+				"postPresentScript": "AncScripts.FightSlamDoor"
+			},
+			"vnStage": {
+				"steve": {
+					"fade": false
+				},
+				"mitch": {
+					"image": "mitch_tense"					
+				}
+			}
+		},
+		"a3": {
+			"type": "text",
+			"nameText": "Steve",
+			"text": "Great, now we're trapped in your room. Why the fuck did we run into your room?",
+			"next": "a4",
+			"vnStage": {
+				"steve": {
+					"image": "steve",
+					"fade": false
+				},
+				"mitch": {
+					"fade": true
+				}
+			}
+		},
+		"a4": {
+			"type": "text",
+			"nameText": "Mitch",
+			"text": "Because it has no windows, it has a lock on the door, and it's where I keep my guns.",
+			"next": "a5",
+			"vnStage": {
+				"steve": {
+					"image": "steve_neutral",
+					"fade": true
+				},
+				"mitch": {
+					"image": "mitch_whisper",
+					"fade": false
+				}
+			}
+		},
+		"a5": {
+			"type": "text",
+			"nameText": "Steve",
+			"text": "Right. I guess that's one good thing about having a redneck as a housemate.",
+			"next": "a6",
+			"vnStage": {
+				"steve": {
+					"image": "steve",
+					"fade": false
+				},
+				"mitch": {
+					"image": "mitch_tense",
+					"fade": true
+				}
+			}
+		},
+		"a6": {
+			"type": "text",
+			"nameText": "Mitch",
+			"text": "Just gotta get the safe open, get the bullets, load... Fuck!",
+			"next": "a7",
+			"vnOptions": {
+				"postPresentScript": "AncScripts.FightGunSounds1"
+			},
+			"vnStage": {
+				"steve": {
+					"image": "steve",
+					"fade": true
+				},
+				"mitch": {
+					"image": "mitch_whisper",
+					"fade": false
+				}
+			}
+		},
+		"a7": {
+			"type": "text",
+			"nameText": "Steve",
+			"text": "What, is there a problem?",
+			"next": "a8",
+			"vnStage": {
+				"steve": {
+					"image": "steve",
+					"fade": false
+				},
+				"mitch": {
+					"image": "mitch_tense",
+					"fade": true
+				}
+			}
+		},
+		"a8": {
+			"type": "text",
+			"nameText": "Mitch",
+			"text": "This is not as easy as the movies make it look!",
+			"next": "a9",
+			"vnOptions": {
+				"postPresentScript": "AncScripts.FightGunSounds2"
+			},
+			"vnStage": {
+				"steve": {
+					"image": "steve",
+					"fade": true
+				},
+				"mitch": {
+					"image": "mitch_whisper",
+					"fade": false
+				}
+			}
+		},
+		"a9": {
+			"type": "text",
+			"next": "a10",
+			"options": {
+				"hideNameText": true
+			},
+			"background": "MitchRoomDoorDestroyed",
+			"vnOptions": {
+				"postPresentScript": "AncScripts.FightClearDoor"
+			},
+			"vnStage": {
+				"steve": {
+					"image": "steve_terrified",
+					"fade": false
+				},
+				"mitch": {
+					"image": "mitch_terrified"
+				}
+			}
+		},
+		"a10": {
+			"type": "text",
+			"next": "meta.return",
+			"options": {
+				"hideNameText": true
+			},
+			"background": "MitchRoomDoorDestroyed",
+			"vnOptions": {
+				"postPresentScript": "AncScripts.FightScreams"
+			},
+			"vnStage": {
+				"shade1": {
+					"image": "shade",
+					"x": 250,
+					"y": 130
+				},
+				"shade2": {
+					"image": "shade",
+					"x": 450,
+					"y": 50
+				},
+				"shade3": {
+					"image": "shade",
+					"x": 570,
+					"y": 275
+				}
+			}
+		}
+	}
+}

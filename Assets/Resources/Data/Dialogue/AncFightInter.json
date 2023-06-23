@@ -1,0 +1,198 @@
+{
+	"position": "character",
+	"default": "a1",
+	"options": {
+	  "panelHeight": "half"
+	},
+	"background": "MitchRoom2Hole",
+	"frames": {
+		"a1": {
+			"type": "text",
+			"next": "a2",
+			"text": "...",
+			"options": {
+				"hideNameText": true
+			},
+			"vnStage": {
+				"steve": {
+					"image": "steph",
+					"x": -400,
+					"y": 0,
+					"z": 1
+				},
+				"mitch": {
+					"image": "mitch_pale_reversed",
+					"x": 460,
+					"y": 0
+				}
+			}
+		},
+		"a2": {
+			"type": "text",
+			"next": "a3",
+			"text": "What the FUCK just happened?",
+			"nameText": "Mitch",
+			"vnStage": {
+				"steve": {
+					"fade": true
+				},
+				"mitch": {
+					"image": "mitch_pale_talk_reversed"
+				}
+			}
+		},
+		"a3": {
+			"type": "text",
+			"next": "a4",
+			"text": "I don't know. I blacked out, and then I woke up, and I thought, I need to kill this thing, and I felt this power, and I just kinda used it.",
+			"nameText": "Steph",
+			"vnStage": {
+				"steve": {
+					"image": "steph_talk",
+					"fade": false
+				},
+				"mitch": {
+					"image": "mitch_pale_reversed",
+					"fade": true
+				}
+			}
+		},
+		"a4": {
+			"type": "text",
+			"next": "a5",
+			"text": "Dude, what did that thing do to you? You sound like a girl and you look like an anime character.",
+			"nameText": "Mitch",
+			"vnStage": {
+				"steve": {
+					"image": "steph",
+					"fade": true
+				},
+				"mitch": {
+					"image": "mitch_pale_talk_reversed",
+					"fade": false
+				}
+			}
+		},
+		"a5": {
+			"type": "text",
+			"next": "a6",
+			"text": "I don't just <i>sound</i> like a girl... I think I <i>am</i> a girl.",
+			"nameText": "Steph",
+			"vnStage": {
+				"steve": {
+					"image": "steph_talk",
+					"fade": false
+				},
+				"mitch": {
+					"image": "mitch_pale_reversed",
+					"fade": true
+				}
+			}
+		},
+		"a6": {
+			"type": "text",
+			"next": "a6a",
+			"text": "You sound okay with this. Why the <i>fuck</i> do you sound so okay with this?",
+			"nameText": "Mitch",
+			"vnStage": {
+				"steve": {
+					"image": "steph",
+					"fade": true
+				},
+				"mitch": {
+					"image": "mitch_pale_talk_reversed",
+					"fade": false
+				}
+			}
+		},
+		"a6a": {
+			"type": "text",
+			"next": "a7",
+			"text": "Whatever the fuck these things are, they can fucking flip genders! Who knows what else they can do?",
+			"nameText": "Mitch",
+			"vnStage": {
+				"steve": {
+					"image": "steph",
+					"fade": true
+				},
+				"mitch": {
+					"image": "mitch_pale_talk_reversed",
+					"fade": false
+				}
+			}
+		},
+		"a7": {
+			"type": "text",
+			"next": "a8",
+			"text": "I don't know, man. Adrenaline?",
+			"nameText": "Steph",
+			"vnStage": {
+				"steve": {
+					"image": "steph_talk",
+					"fade": false
+				},
+				"mitch": {
+					"image": "mitch_pale_reversed",
+					"fade": true
+				}
+			}
+		},
+		"a8": {
+			"type": "text",
+			"next": "a9",
+			"text": "Lucky you, getting the serene calm. My heart's going a mile a minute and I feel like I'm going to throw up.",
+			"nameText": "Mitch",
+			"vnStage": {
+				"steve": {
+					"image": "steph",
+					"fade": true
+				},
+				"mitch": {
+					"image": "mitch_pale_talk_reversed",
+					"fade": false
+				}
+			}
+		},
+		"a9": {
+			"type": "text",
+			"nameText": "",
+			"options": {
+				"hideNameText": true
+			},
+			"background": "MitchRoom2Enemies",
+			"text": "<(>screaming noises<)>",
+			"next": "a10",
+			"vnOptions": {
+				"typeOn": false,
+				"postPresentScript": "AncScripts.FightOminousNoise"
+			},
+			"vnStage": {
+				"steve": {
+					"image": "steph_terrified",
+					"fade": false
+				},
+				"mitch": {
+					"image": "mitch_pale_terrified_reversed",
+					"fade": false
+				}
+			}
+		},
+		"a10": {
+			"type": "text",
+			"next": "meta.return",
+			"background": "MitchRoom2Enemies",
+			"text": "So, uh, think you could do that magic trick again?",
+			"nameText": "Mitch",
+			"vnStage": {
+				"steve": {
+					"image": "steph",
+					"fade": true
+				},
+				"mitch": {
+					"image": "mitch_pale_talk_reversed",
+					"fade": false
+				}
+			}
+		}
+	}
+}

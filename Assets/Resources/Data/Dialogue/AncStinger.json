@@ -1,0 +1,309 @@
+{
+	"position": "character",
+	"default": "a1",
+	"options": {
+	  "panelHeight": "half"
+	},
+	"background": "DeloraFarm",
+	"frames": {
+		"a1": {
+			"type": "text",
+			"next": "a2",
+			"text": "...",
+			"options": {
+				"hideNameText": true
+			},
+			"vnStage": {
+				"sakura": {
+					"image": "sakura",
+					"x": -160,
+					"y": 0,
+					"z": 5
+				},
+				"gina": {
+					"image": "gina",
+					"x": -400,
+					"y": 0,
+					"z": 3
+				},
+				"tiff": {
+					"image": "tiff",
+					"x": 500,
+					"y": 0,
+					"z": 1
+				},
+				"nguyen": {
+					"image": "nguyen",
+					"x": 200,
+					"y": 0
+				}
+			}
+		},
+		"a2": {
+			"type": "text",
+			"next": "a3",
+			"text": "So, how'd the onboarding go?",
+			"nameText": "Sakura",
+			"vnStage": {
+				"sakura": {
+					"image": "sakura_talk",
+					"fade": false
+				},
+				"gina": {
+					"fade": true
+				},
+				"tiff": {
+					"fade": true
+				},
+				"nguyen": {
+					"fade": true
+				}
+			}
+		},
+		"a3": {
+			"type": "text",
+			"next": "a4",
+			"text": "Well, she only ran away from us once, so I think that's a good sign.",
+			"nameText": "Nguyen",
+			"vnStage": {
+				"sakura": {
+					"image": "sakura",
+					"fade": true
+				},
+				"nguyen": {
+					"image": "nguyen_talk",
+					"fade": false
+				}
+			}
+		},
+		"a4": {
+			"type": "text",
+			"next": "a5",
+			"text": "It was definitely a tricky one to handle, and I know you told us that, but I don't think I realized it until I started talking to Stephanie.",
+			"nameText": "Tiff",
+			"vnStage": {
+				"tiff": {
+					"image": "tiff_talk",
+					"fade": false
+				},
+				"nguyen": {
+					"image": "nguyen",
+					"fade": true
+				}
+			}
+		},
+		"a5": {
+			"type": "text",
+			"next": "a6",
+			"text": "It was a good thing that I did my reading ahead of time. Otherwise, I would have had no idea what to say. She might have told us to get lost, or worse.",
+			"nameText": "Tiff",
+			"vnStage": {
+				
+			}
+		},
+		"a6": {
+			"type": "text",
+			"next": "a7",
+			"text": "I mean, her big friend did threaten to shoot us.",
+			"nameText": "Nguyen",
+			"vnStage": {
+				"tiff": {
+					"image": "tiff",
+					"fade": true
+				},
+				"nguyen": {
+					"image": "nguyen_talk",
+					"fade": false
+				}
+			}
+		},
+		"a7": {
+			"type": "text",
+			"next": "a8",
+			"text": "Heh, sorry about giving you such a tough case for your first onboarding. Gina and I were going to handle it, but I got called in for my internship thing and, you know, I couldn't tell them I had magical girl stuff.",
+			"nameText": "Sakura",
+			"vnStage": {
+				"sakura": {
+					"image": "sakura_talk",
+					"fade": false
+				},
+				"gina": {
+					"fade": true
+				},
+				"tiff": {
+					"fade": true
+				},
+				"nguyen": {
+					"image": "nguyen",
+					"fade": true
+				}
+			}
+		},
+		"a7a": {
+			"type": "text",
+			"next": "a8",
+			"text": "It sounds like you handled it really well, though, and learned a lot doing it, which is great!",
+			"nameText": "Sakura",
+			"vnStage": {
+				"sakura": {
+					"image": "sakura_talk",
+					"fade": false
+				},
+				"gina": {
+					"fade": true
+				},
+				"tiff": {
+					"fade": true
+				},
+				"nguyen": {
+					"image": "nguyen",
+					"fade": true
+				}
+			}
+		},
+		"a8": {
+			"type": "text",
+			"next": "a8a",
+			"text": "I mean, I don't think there are any easy onboardings left. Jane burned through those years ago, we've only got the hard ones left. And maybe, like, a trickle of new ones we don't know about.",
+			"nameText": "Gina",
+			"vnStage": {
+				"sakura": {
+					"image": "sakura",
+					"fade": true
+				},
+				"gina": {
+					"image": "gina_talk",
+					"fade": false
+				}
+			}
+		},
+		"a8a": {
+			"type": "text",
+			"next": "a9",
+			"text": "Also, onboardings? Come on, you've only been at that big company for a week and you're already starting to spout buzzwords. At this rate you'll be a walking, talking company website by the end of the month.",
+			"nameText": "Gina",
+			"vnStage": {
+				"sakura": {
+					"image": "sakura",
+					"fade": true
+				},
+				"gina": {
+					"image": "gina_talk",
+					"fade": false
+				}
+			}
+		},
+		"a9": {
+			"type": "text",
+			"next": "a10",
+			"text": "It's a good word for it! We've been calling it all sorts of weird names, why not just use that one?",
+			"nameText": "Sakura",
+			"vnStage": {
+				"sakura": {
+					"image": "sakura_talk",
+					"fade": false
+				},
+				"gina": {
+					"image": "gina",
+					"fade": true
+				}
+			}
+		},
+		"a10": {
+			"type": "text",
+			"next": "a10a",
+			"text": "You're right about being through all the easy onboardings, though. Some of these people are super busy, or are dealing with tough problems of their own. But that doesn't mean they're not going to make great magical girls!",
+			"nameText": "Sakura",
+			"vnStage": {
+				"sakura": {
+					"image": "sakura_talk",
+					"fade": false
+				},
+				"gina": {
+					"image": "gina",
+					"fade": true
+				}
+			}
+		},
+		"a10a": {
+			"type": "text",
+			"next": "a11",
+			"text": "Everybody's a bit fucked up at this point. If we try to insist on perfection we're just going to have a Delora situation all over again.",
+			"nameText": "Gina",
+			"vnStage": {
+				"sakura": {
+					"image": "sakura",
+					"fade": true
+				},
+				"gina": {
+					"image": "gina_talk",
+					"fade": false
+				}
+			}
+		},
+		"a11": {
+			"type": "text",
+			"next": "a12",
+			"text": "That's right! We're all only human. What really matters is that we all try our best, and stand by each other because we're stronger together!",
+			"nameText": "Sakura",
+			"vnStage": {
+				"sakura": {
+					"image": "sakura_talk",
+					"fade": false
+				},
+				"gina": {
+					"image": "gina",
+					"fade": true
+				}
+			}
+		},
+		"a12": {
+			"type": "text",
+			"next": "a13",
+			"text": "Anyway, I know you two were nervous about onboarding Stephanie, but you handled it really well! It'll be great experience for the next one, too!",
+			"nameText": "Sakura",
+			"vnStage": {
+				"sakura": {
+					"image": "sakura_talk",
+					"fade": false
+				},
+				"gina": {
+					"image": "gina",
+					"fade": true
+				}
+			}
+		},
+		"a13": {
+			"type": "text",
+			"next": "a14",
+			"text": "The... next one?",
+			"nameText": "Nguyen",
+			"vnStage": {
+				"sakura": {
+					"image": "sakura",
+					"fade": true
+				},
+				"nguyen": {
+					"image": "nguyen_talk",
+					"fade": false
+				}
+			}
+		},
+		"a14": {
+			"type": "text",
+			"next": "meta.return",
+			"text": "So, remember that Dutch girl...",
+			"nameText": "Sakura",
+			"vnStage": {
+				"sakura": {
+					"image": "sakura_talk",
+					"fade": false
+				},
+				"nguyen": {
+					"image": "nguyen",
+					"fade": true
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,192 @@
+{
+	"position": "character",
+	"default": "m1",
+	"options": {
+	  "panelHeight": "half"
+	},
+	"background": "Polytechnic",
+	"frames": {
+		"pre1": {
+			"type": "text",
+			"background": "SteveGaming2",
+			"options": {
+				"hideNameText": true
+			},
+			"text": "Hey, Steve. Steve? Pause that thing, man.",
+			"next": "intro1"
+		},
+		"m1": {
+			"type": "text",
+			"next": "m2",
+			"text": "...",
+			"options": {
+				"hideNameText": true
+			},
+			"vnStage": {
+				"steve": {
+					"image": "steve_neutral",
+					"x": -400,
+					"y": 0,
+					"z": 1
+				},
+				"mitch": {
+					"image": "mitch_reversed",
+					"x": 400,
+					"y": 0
+				}
+			}
+		},
+		"m2": {
+			"type": "text",
+			"next": "m3",
+			"text": "So...",
+			"nameText": "Mitch",
+			"vnStage": {
+				"steve": {
+					"fade": true
+				},
+				"mitch": {
+					"image": "mitch_talk_reversed",
+					"fade": false
+				}
+			}
+		},
+		"m3": {
+			"type": "text",
+			"next": "m3a",
+			"text": "They didn't really explain anything. Just what they said when you were in the room, but with more words. I think the only useful thing they said was that it wasn't the monster that made me a magical girl.",
+			"nameText": "Steve",
+			"vnStage": {
+				"steve": {
+					"image": "steve",
+					"fade": false
+				},
+				"mitch": {
+					"image": "mitch_reversed",
+					"fade": true
+				}
+			}
+		},
+		"m3a": {
+			"type": "text",
+			"next": "m3b",
+			"text": "And you believe them?",
+			"nameText": "Mitch",
+			"vnStage": {
+				"steve": {
+					"image": "steve_neutral",
+					"fade": true
+				},
+				"mitch": {
+					"image": "mitch_talk_reversed",
+					"fade": false
+				}
+			}
+		},
+		"m3b": {
+			"type": "text",
+			"next": "m4",
+			"text": "Do you have a better explanation?",
+			"nameText": "Steve",
+			"vnStage": {
+				"steve": {
+					"image": "steve",
+					"fade": false
+				},
+				"mitch": {
+					"image": "mitch_reversed",
+					"fade": true
+				}
+			}
+		},
+		"m4": {
+			"type": "text",
+			"next": "m5",
+			"text": "Dude, I can't believe you were already asleep when I got back. How the fuck do you sleep after something like that?",
+			"nameText": "Steve",
+			"vnStage": {
+				
+			}
+		},
+		"m5": {
+			"type": "text",
+			"next": "c1",
+			"text": "I have a test today, man. Gotta focus on that. You've got that Matrix assignment, right? Should probably focus on that.",
+			"nameText": "Mitch",
+			"vnStage": {
+				"steve": {
+					"image": "steve_neutral",
+					"fade": true
+				},
+				"mitch": {
+					"image": "mitch_talk_reversed",
+					"fade": false
+				}
+			}
+		},
+		"c1": {
+			"type": "text",
+			"next": "c2",
+			"text": "We got attacked by monsters. I got transformed into a magical girl. How can you pretend things are normal after that?",
+			"nameText": "Steve",
+			"vnStage": {
+				"steve": {
+					"image": "steve",
+					"fade": false
+				},
+				"mitch": {
+					"image": "mitch_reversed",
+					"fade": true
+				}
+			}
+		},
+		"c2": {
+			"type": "text",
+			"next": "c3",
+			"text": "It's 2021. Practically all we do is pretend things are normal as the world burns around us.",
+			"nameText": "Mitch",
+			"vnStage": {
+				"steve": {
+					"image": "steve_neutral",
+					"fade": true
+				},
+				"mitch": {
+					"image": "mitch_talk_reversed",
+					"fade": false
+				}
+			}
+		},
+		"c3": {
+			"type": "text",
+			"next": "c4",
+			"text": "Look, man, it's a new day. You've got an assignment to ace, and maybe you can try to make some new friends like you said you were going to.",
+			"nameText": "Mitch",
+			"vnStage": {				
+			}
+		},
+		"c4": {
+			"type": "text",
+			"next": "c5",
+			"text": "We can't do anything about whatever the fuck happened last night. Nobody would even believe us. So man up, clear your mind, and kick ass.",
+			"nameText": "Mitch",
+			"vnStage": {
+			}
+		},
+		"c5": {
+			"type": "text",
+			"next": "meta.return",
+			"text": "Yeah. Sure.",
+			"nameText": "Steve",
+			"vnStage": {
+				"steve": {
+					"image": "steve",
+					"fade": false
+				},
+				"mitch": {
+					"image": "mitch_reversed",
+					"fade": true
+				}
+			}
+		}
+	}
+}
